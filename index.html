@@ -102,6 +102,14 @@ p {
     height: 270px;
     border-radius: 12px;
 }
+        
+#countdown {
+    font-family: 'Great Vibes', cursive;
+    font-size: 48px;
+    text-align: center;
+    margin-top: 20px;
+    color: black;
+}
 
 </style>
 
@@ -115,15 +123,43 @@ p {
     <div class="photo-container">
         <img src="IMG_20250929_151817814_HDR_AE.jpg" alt="Zdjęcie pary młodej">
     </div>
-
-<div class="video-wrapper"> <iframe src="https://www.youtube.com/embed/jNQXAC9IVRw" allowfullscreen> </iframe> </div>
+    <div id="countdown"></div>
 
     <div class="footer">
         Z radością będziemy świętować ten dzień razem z Wami
     </div>
 
+<script>
+    // USTAW DATĘ WESELA
+    const weddingDate = new Date("2026-06-20T15:00:00").getTime();
+
+    function updateCountdown() {
+        const now = new Date().getTime();
+        const distance = weddingDate - now;
+
+        if (distance < 0) {
+            document.getElementById("countdown").innerHTML = "To już dziś!";
+            return;
+        }
+
+        const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+        const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+        const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+        const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+        document.getElementById("countdown").innerHTML =
+            days + " dni " + hours + " godz " + minutes + " min " + seconds + " sek";
+    }
+
+    setInterval(updateCountdown, 1000);
+</script>
+
+
+
+    
 </body>
 </html>
+
 
 
 
