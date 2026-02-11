@@ -2,97 +2,65 @@
 <html lang="pl">
 <head>
     <meta charset="UTF-8">
-    <title>Potwierdzenie obecności – Nasze Wesele</title>
+    <title>Nasze Wesele – Wideo</title>
     <style>
-
-        /* Kolaż zdjęć jako tło — działa z 2 zdjęciami */
-        body::before {
-            content: "";
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background-image:
-                url('foto1.jpg'),
-                url('foto2.jpg');
-            background-size: 50% 100%, 50% 100%; /* dwa zdjęcia obok siebie */
-            background-position: left top, right top;
-            background-repeat: no-repeat;
-            opacity: 0.35; /* pastelowy efekt */
-            z-index: -1;
-        }
 
         body {
             font-family: 'Georgia', serif;
             margin: 0;
             padding: 0;
+            background: #f3efe7;
             color: #4a3f35;
-            background: transparent;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
         }
 
         .header {
-            background: rgba(0, 0, 0, 0.35);
-            padding: 80px 20px;
             text-align: center;
-            color: white;
-            text-shadow: 0 2px 6px rgba(0,0,0,0.5);
+            padding: 40px 20px;
         }
 
         .header h1 {
-            font-size: 48px;
+            font-size: 42px;
             margin: 0;
         }
 
-        .photo-container {
-            text-align: center;
-            margin-top: -60px;
-        }
-
-        .photo-container img {
-            width: 260px;
-            height: 260px;
-            object-fit: cover;
-            border-radius: 50%;
-            border: 6px solid #fff;
-            box-shadow: 0 4px 12px rgba(0,0,0,0.2);
-        }
-
-        .content {
-            max-width: 700px;
-            margin: 40px auto;
-            background: rgba(255, 255, 255, 0.85);
-            padding: 30px;
-            border-radius: 12px;
-            box-shadow: 0 0 20px rgba(0,0,0,0.1);
-        }
-
-        h2 {
-            text-align: center;
-            font-size: 28px;
-            margin-bottom: 10px;
-        }
-
-        p {
-            text-align: center;
-            font-size: 18px;
-            margin-bottom: 30px;
+        .video-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-grow: 1;
+            padding: 20px;
         }
 
         iframe {
-            width: 100%;
-            height: 650px;
+            width: 80%;
+            max-width: 900px;
+            height: 500px;
             border: none;
-            border-radius: 8px;
-            background: rgba(255, 255, 255, 0.85);
+            border-radius: 12px;
+            box-shadow: 0 0 20px rgba(0,0,0,0.2);
         }
 
-        .footer {
-            text-align: center;
-            padding: 20px;
-            font-size: 14px;
-            color: #6b5e53;
-            background: rgba(255, 255, 255, 0.7);
+        .buttons {
+            display: flex;
+            justify-content: space-between;
+            padding: 30px 60px;
+        }
+
+        .btn {
+            background: #4a3f35;
+            color: white;
+            padding: 15px 30px;
+            border-radius: 8px;
+            text-decoration: none;
+            font-size: 20px;
+            transition: 0.2s;
+        }
+
+        .btn:hover {
+            background: #6b5e53;
         }
 
     </style>
@@ -100,28 +68,19 @@
 <body>
 
     <div class="header">
-        <h1>Nasze Wesele</h1>
+        <h1>Nasze Wesele – Wideo</h1>
     </div>
 
-    <div class="photo-container">
-        <img src="test.jpg" alt="Zdjęcie pary młodej">
+    <div class="video-container">
+        <iframe 
+            src="https://www.youtube.com/embed/jNQXAC9IVRw" 
+            allowfullscreen>
+        </iframe>
     </div>
 
-    <div class="content">
-        <h2>Potwierdzenie obecności</h2>
-        <p>Prosimy o wypełnienie krótkiego formularza RSVP, abyśmy mogli lepiej przygotować uroczystość.</p>
-    </div>
-
-    <iframe
-        src="https://docs.google.com/forms/d/e/1FAIpQLSeU-76scHjjLoXpXhnbuAVjlhxnZsFDJinIpGXxk-KjkdKfjg/viewform?embedded=true"
-        frameborder="0"
-        marginheight="0"
-        marginwidth="0">
-        Ładuję…
-    </iframe>
-
-    <div class="footer">
-        Z radością będziemy świętować ten dzień razem z Wami
+    <div class="buttons">
+        <a class="btn" href="strona1.html">← Poprzednia strona</a>
+        <a class="btn" href="strona2.html">Następna strona →</a>
     </div>
 
 </body>
