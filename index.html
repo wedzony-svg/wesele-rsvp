@@ -18,7 +18,9 @@
   background: rgba(255, 255, 255, 0.7);
 }
 
-    .timeline-section {
+/* --- HARMONOGRAM (SZAŁWIA + BIEL + IKONY) --- */
+
+.timeline-section {
   max-width: 700px;
   margin: 60px auto;
   padding: 40px;
@@ -37,59 +39,92 @@
 
 .timeline {
   position: relative;
-  padding-left: 60px; /* więcej miejsca na linię i kółka */
+  padding-left: 60px;
 }
 
-/* pionowa linia — teraz idealnie przez środek kółek */
+/* pionowa linia */
 .timeline::before {
   content: "";
+  position: absolute;
+  left: 30px;
+  top: 0;
+  bottom: 0;
+  width: 3px;
+  background: #9BAE9A;
+}
+
+.timeline-item {
+  position: relative;
+  margin-bottom: 50px;
+}
+
+/* kółko z godziną */
+.timeline-time {
+  position: absolute;
+  left: 30px;
+  top: 0;
+  transform: translate(-50%, 0);
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  background: #ffffff;
+  border: 3px solid #9BAE9A;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Great Vibes', cursive;
+  font-size: 28px;
+  color: #6F8F6A;
+}
+
+/* ikonka */
+.timeline-icon {
+  position: absolute;
+  left: 95px;
+  top: 12px;
+  width: 40px;
+  height: 40px;
+  object-fit: contain;
+}
+
+/* opis */
+.timeline-content {
+  margin-left: 150px;
+  font-size: 28px;
+  font-family: 'Great Vibes', cursive;
+  color: #3F4F3D;
+  line-height: 1.4;
+}
 
 /* responsywność */
 @media (max-width: 600px) {
   .timeline {
-    margin-left: 20px;
+    padding-left: 50px;
+  }
+
+  .timeline::before {
+    left: 25px;
   }
 
   .timeline-time {
-    width: 50px;
-    height: 50px;
-    font-size: 14px;
+    width: 55px;
+    height: 55px;
+    font-size: 20px;
+    left: 25px;
+  }
+
+  .timeline-icon {
+    left: 80px;
+    width: 32px;
+    height: 32px;
   }
 
   .timeline-content {
-    font-size: 18px;
+    margin-left: 120px;
+    font-size: 22px;
   }
 }
 
-.info-item {
-  text-align: center;
-  padding: 20px;
-}
-
-.info-icon {
-  width: 80px;
-  height: 80px;
-  object-fit: contain;
-  margin-bottom: 15px;
-}
-
-.info-item h3 {
-  font-family: 'Great Vibes', cursive;
-  font-size: 36px;
-  margin: 10px 0;
-}
-
-.info-item p {
-  font-size: 16px;
-  line-height: 1.5;
-}
-
-/* RESPONSYWNOŚĆ */
-@media (max-width: 768px) {
-  .info-grid {
-    grid-template-columns: 1fr;
-  }
-}
     
     body {
       min-height: 100vh;
@@ -362,31 +397,63 @@ i o chwili, którą z radością chcemy dzielić z Wami.
   <div class="text-box">
     <h3>Harmonogram Imprezy</h3>
   </div>
+  
   <div class="timeline-section">
   <h3>Harmonogram dnia</h3>
 
   <div class="timeline">
-    <div class="timeline-item">
-      <div class="timeline-time">16:00</div>
-      <div class="timeline-content">Ceremonia zaślubin</div>
-    </div>
 
     <div class="timeline-item">
       <div class="timeline-time">18:00</div>
-      <div class="timeline-content">Pierwszy taniec</div>
+      <img src="ico/rings.png" class="timeline-icon" alt="">
+      <div class="timeline-content">Ceremonia</div>
     </div>
 
     <div class="timeline-item">
       <div class="timeline-time">19:00</div>
-      <div class="timeline-content">Życzenia</div>
+      <img src="ico/dance.png" class="timeline-icon" alt="">
+      <div class="timeline-content">Pierwszy taniec</div>
     </div>
 
     <div class="timeline-item">
       <div class="timeline-time">20:00</div>
-      <div class="timeline-content">Tort</div>
+      <img src="ico/dinner.png" class="timeline-icon" alt="">
+      <div class="timeline-content">Pierwszy posiłek</div>
     </div>
+
+    <div class="timeline-item">
+      <div class="timeline-time">21:00</div>
+      <img src="ico/heart.png" class="timeline-icon" alt="">
+      <div class="timeline-content">Życzenia</div>
+    </div>
+
+    <div class="timeline-item">
+      <div class="timeline-time">22:00</div>
+      <img src="ico/dinner2.png" class="timeline-icon" alt="">
+      <div class="timeline-content">Drugi posiłek</div>
+    </div>
+
+    <div class="timeline-item">
+      <div class="timeline-time">23:00</div>
+      <img src="ico/dinner3.png" class="timeline-icon" alt="">
+      <div class="timeline-content">Trzeci posiłek</div>
+    </div>
+
+    <div class="timeline-item">
+      <div class="timeline-time">00:00</div>
+      <img src="ico/soup.png" class="timeline-icon" alt="">
+      <div class="timeline-content">Barszczyk</div>
+    </div>
+
+    <div class="timeline-item">
+      <div class="timeline-time">01:00</div>
+      <img src="ico/confetti.png" class="timeline-icon" alt="">
+      <div class="timeline-content">Oczepiny</div>
+    </div>
+
   </div>
 </div>
+
 
   <div class="footer">
     Z radością będziemy świętować ten dzień razem z Wami
@@ -422,6 +489,7 @@ i o chwili, którą z radością chcemy dzielić z Wami.
 
 </body>
 </html>
+
 
 
 
