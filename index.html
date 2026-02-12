@@ -7,6 +7,9 @@
   <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap" rel="stylesheet">
 
   <style>
+    
+    html { scroll-behavior: smooth; }
+    
     .info-grid {
       display: grid;
       grid-template-columns: repeat(2, 1fr);
@@ -211,6 +214,7 @@
       font-weight:600;
       box-shadow: 0 4px 12px rgba(0,0,0,0.15);
       transition: transform .15s ease, box-shadow .15s ease;
+      font-size: 40px;
     }
 
     .btn-calendar:hover {
@@ -287,16 +291,17 @@
     <div id="countdown"></div>
   </div>
 
-  <div class="right">
-    <div class="text-box">
-      <h2>Elo Elo wbijajcie na wesele!</h2>
-      <p>17.10.2026 w Pobiedniku Wielkim</p>
-      <a class="btn-calendar"
-         target="_blank"
-         rel="noopener"
-         href="https://calendar.google.com/calendar/render?action=TEMPLATE&text=Wesele%20Piotrka%20i%20Patrycji&dates=20261017T160000/20261018T040000&ctz=Europe/Warsaw&details=Wesele%20i%20ceremonia%20zaslubin%20Piotra%20i%20Patrycji.%0A%0AData%3A%2017.10.2026%2016%3A00%20-%2018.10.2026%2004%3A00%0AMiejsce%3A%20Szlachecki%20Dwor%20Pobiednik%20Wielki%0ALokalizacja%20(mapy)%3A%20https%3A%2F%2Fwww.google.com%2Fmaps%2Fplace%2F%2Fdata%3D%214m2%213m1%211s0x4716486f0e34b97d%3A0x63b6553e543f997e%3Fsa%3DX%26ved%3D1t%3A8290%26ictx%3D111&location=Szlachecki%20Dwor%20Pobiednik%20Wielki&sf=true&output=xml">
-        Dodaj do Google Kalendarza
-      </a>
+<a class="btn-calendar"
+   target="_blank"
+   rel="noopener"
+   href="https://calendar.google.com/calendar/render?action=TEMPLATE&text=Wesele%20Piotrka%20i%20Patrycji&dates=20261017T160000/20261018T040000&ctz=Europe/Warsaw">
+  Dodaj do Google Kalendarza
+</a>
+
+<a class="btn-calendar" href="#formularz">
+  Potwierdź obecność
+</a>
+
     </div>
     <img src="foto1.jpg" alt="Zdjęcie">
   </div>
@@ -374,7 +379,7 @@
     <h3>Potwierdzenie obecności</h3>
   </div>
 
-  <div class="form-section">
+<div class="form-section" id="formularz">
     <iframe
       src="https://docs.google.com/forms/d/e/1FAIpQLSeU-76scHjjLoXpXhnbuAVjlhxnZsFDJinIpGXxk-KjkdKfjg/viewform?embedded=true"
       width="100%"
@@ -476,6 +481,7 @@
 
 </body>
 </html>
+
 
 
 
