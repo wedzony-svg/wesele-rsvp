@@ -18,6 +18,90 @@
   background: rgba(255, 255, 255, 0.7);
 }
 
+    .timeline-section {
+  max-width: 700px;
+  margin: 60px auto;
+  padding: 40px;
+  background: rgba(255,255,255,0.7);
+  border-radius: 16px;
+}
+
+.timeline-section h3 {
+  font-family: 'Great Vibes', cursive;
+  font-size: 56px;
+  text-align: center;
+  margin-top: 0;
+  margin-bottom: 30px;
+  color: #6F8F6A; /* ciemniejsza szałwia */
+}
+
+.timeline {
+  position: relative;
+  margin-left: 40px;
+  padding-left: 20px;
+}
+
+/* pionowa linia w kolorze szałwii */
+.timeline::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  width: 3px;
+  background: #9BAE9A;
+}
+
+/* pojedynczy punkt */
+.timeline-item {
+  position: relative;
+  margin-bottom: 35px;
+}
+
+/* kółko z godziną – białe z szałwiową obwódką */
+.timeline-time {
+  position: absolute;
+  left: -40px;
+  top: 0;
+  transform: translateX(-50%);
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background: #ffffff;
+  border: 3px solid #9BAE9A;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 600;
+  color: #6F8F6A;
+  font-size: 18px;
+}
+
+/* opis */
+.timeline-content {
+  margin-left: 40px;
+  font-size: 22px;
+  line-height: 1.4;
+  color: #3F4F3D; /* ciemniejsza zieleń dla czytelności */
+}
+
+/* responsywność */
+@media (max-width: 600px) {
+  .timeline {
+    margin-left: 20px;
+  }
+
+  .timeline-time {
+    width: 50px;
+    height: 50px;
+    font-size: 14px;
+  }
+
+  .timeline-content {
+    font-size: 18px;
+  }
+}
+
 .info-item {
   text-align: center;
   padding: 20px;
@@ -246,7 +330,7 @@ i o chwili, którą z radością chcemy dzielić z Wami.
 <div class="info-grid">
 
   <div class="info-item">
-    <img src="dupa.png" alt="Nocleg" class="info-icon">
+    <img src="ico/bed.png" alt="Nocleg" class="info-icon">
     <h3>Nocleg</h3>
     <p>Istnieje możliwość noclegu w obiekcie – liczba miejsc ograniczona, jeśli potrzebujesz noclegu na miejscu daj nam znać przez formularz.</p>
   </div>
@@ -315,6 +399,35 @@ i o chwili, którą z radością chcemy dzielić z Wami.
     Ładowanie formularza…
   </iframe>
 </div>
+  
+  <div class="text-box">
+    <h3>Harmonogram Imprezy</h3>
+  </div>
+  <div class="timeline-section">
+  <h3>Harmonogram dnia</h3>
+
+  <div class="timeline">
+    <div class="timeline-item">
+      <div class="timeline-time">16:00</div>
+      <div class="timeline-content">Ceremonia zaślubin</div>
+    </div>
+
+    <div class="timeline-item">
+      <div class="timeline-time">18:00</div>
+      <div class="timeline-content">Pierwszy taniec</div>
+    </div>
+
+    <div class="timeline-item">
+      <div class="timeline-time">19:00</div>
+      <div class="timeline-content">Życzenia</div>
+    </div>
+
+    <div class="timeline-item">
+      <div class="timeline-time">20:00</div>
+      <div class="timeline-content">Tort</div>
+    </div>
+  </div>
+</div>
 
   <div class="footer">
     Z radością będziemy świętować ten dzień razem z Wami
@@ -350,6 +463,7 @@ i o chwili, którą z radością chcemy dzielić z Wami.
 
 </body>
 </html>
+
 
 
 
