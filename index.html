@@ -32,58 +32,17 @@
   text-align: center;
   margin-top: 0;
   margin-bottom: 30px;
-  color: #6F8F6A; /* ciemniejsza szałwia */
+  color: #6F8F6A;
 }
 
 .timeline {
   position: relative;
-  margin-left: 40px;
-  padding-left: 20px;
+  padding-left: 60px; /* więcej miejsca na linię i kółka */
 }
 
-/* pionowa linia w kolorze szałwii */
+/* pionowa linia — teraz idealnie przez środek kółek */
 .timeline::before {
   content: "";
-  position: absolute;
-  left: 0;
-  top: 0;
-  bottom: 0;
-  width: 3px;
-  background: #9BAE9A;
-}
-
-/* pojedynczy punkt */
-.timeline-item {
-  position: relative;
-  margin-bottom: 35px;
-}
-
-/* kółko z godziną – białe z szałwiową obwódką */
-.timeline-time {
-  position: absolute;
-  left: -40px;
-  top: 0;
-  transform: translateX(-50%);
-  width: 60px;
-  height: 60px;
-  border-radius: 50%;
-  background: #ffffff;
-  border: 3px solid #9BAE9A;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-weight: 600;
-  color: #6F8F6A;
-  font-size: 18px;
-}
-
-/* opis */
-.timeline-content {
-  margin-left: 40px;
-  font-size: 22px;
-  line-height: 1.4;
-  color: #3F4F3D; /* ciemniejsza zieleń dla czytelności */
-}
 
 /* responsywność */
 @media (max-width: 600px) {
@@ -463,6 +422,7 @@ i o chwili, którą z radością chcemy dzielić z Wami.
 
 </body>
 </html>
+
 
 
 
