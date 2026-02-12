@@ -7,10 +7,53 @@
   <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap" rel="stylesheet">
 
   <style>
+
+    .info-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 30px;
+
+  margin: 60px auto;
+  padding: 40px;
+  background: rgba(255, 255, 255, 0.7);
+}
+
+.info-item {
+  text-align: center;
+  padding: 20px;
+}
+
+.info-icon {
+  width: 80px;
+  height: 80px;
+  object-fit: contain;
+  margin-bottom: 15px;
+}
+
+.info-item h3 {
+  font-family: 'Great Vibes', cursive;
+  font-size: 36px;
+  margin: 10px 0;
+}
+
+.info-item p {
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+/* RESPONSYWNOŚĆ */
+@media (max-width: 768px) {
+  .info-grid {
+    grid-template-columns: 1fr;
+  }
+}
+    
     body {
       margin: 0;
       background-image: url('tlo2.png');
-      background-repeat: repeat;
+      background-repeat: repeat; 
+      background-color: rgba(255, 255, 255, 0.7);
+      background-blend-mode: lighten;
     }
 
     /* HEADER */
@@ -289,6 +332,7 @@ i o chwili, którą z radością chcemy dzielić z Wami.
 
 </body>
 </html>
+
 
 
 
