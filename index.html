@@ -7,135 +7,121 @@
   <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap" rel="stylesheet">
 
   <style>
-
     .info-grid {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 30px;
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 30px;
+      margin: 60px auto;
+      padding: 40px;
+      background: rgba(255, 255, 255, 0.7);
+    }
 
-  margin: 60px auto;
-  padding: 40px;
-  background: rgba(255, 255, 255, 0.7);
-}
+    .info-item {
+      text-align: center;
+      padding: 20px;
+    }
 
-/* --- HARMONOGRAM (SZAŁWIA + BIEL + IKONY) --- */
+    .info-icon {
+      width: 80px;
+      height: 80px;
+      object-fit: contain;
+      margin-bottom: 15px;
+    }
 
-.timeline-section {
-  max-width: 700px;
-  margin: 60px auto;
-  padding: 40px;
-  background: rgba(255,255,255,0.7);
-  border-radius: 16px;
-}
+    .info-item h3 {
+      font-family: 'Great Vibes', cursive;
+      font-size: 36px;
+      margin: 10px 0;
+    }
 
-.timeline-section h3 {
-  font-family: 'Great Vibes', cursive;
-  font-size: 56px;
-  text-align: center;
-  margin-top: 0;
-  margin-bottom: 30px;
-  color: #6F8F6A;
-}
+    .info-item p {
+      font-size: 16px;
+      line-height: 1.5;
+    }
 
-.timeline {
-  position: relative;
-  padding-left: 60px;
-}
+    /* --- HARMONOGRAM (SZAŁWIA + BIEL + IKONY) --- */
 
-/* pionowa linia */
-.timeline::before {
-  content: "";
-  position: absolute;
-  left: 30px;
-  top: 0;
-  bottom: 0;
-  width: 3px;
-  background: #9BAE9A;
-}
+    .timeline-section {
+      max-width: 700px;
+      margin: 60px auto;
+      padding: 40px;
+      background: rgba(255,255,255,0.7);
+      border-radius: 16px;
+    }
 
-.timeline-item {
-  position: relative;
-  margin-bottom: 50px;
-}
+    .timeline-section h3 {
+      font-family: 'Great Vibes', cursive;
+      font-size: 56px;
+      text-align: center;
+      margin-top: 0;
+      margin-bottom: 30px;
+      color: #6F8F6A;
+    }
 
-/* kółko z godziną */
-.timeline-time {
-  position: absolute;
-  left: 30px;
-  top: 0;
-  transform: translate(-50%, 0);
-  width: 70px;
-  height: 70px;
-  border-radius: 50%;
-  background: #ffffff;
-  border: 3px solid #9BAE9A;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-family: 'Great Vibes', cursive;
-  font-size: 28px;
-  color: #6F8F6A;
-}
+    .timeline {
+      position: relative;
+      padding-left: 60px;
+    }
 
-/* ikonka */
-.timeline-icon {
-  position: absolute;
-  left: 95px;
-  top: 12px;
-  width: 40px;
-  height: 40px;
-  object-fit: contain;
-}
+    .timeline::before {
+      content: "";
+      position: absolute;
+      left: 30px;
+      top: 0;
+      bottom: 0;
+      width: 3px;
+      background: #9BAE9A;
+    }
 
-/* opis */
-.timeline-content {
-  margin-left: 150px;
-  font-size: 28px;
-  font-family: 'Great Vibes', cursive;
-  color: #3F4F3D;
-  line-height: 1.4;
-}
+    .timeline-item {
+      position: relative;
+      margin-bottom: 50px;
+    }
 
-/* responsywność */
-@media (max-width: 600px) {
-  .timeline {
-    padding-left: 50px;
-  }
+    .timeline-time {
+      position: absolute;
+      left: 30px;
+      top: 0;
+      transform: translate(-50%, 0);
+      width: 70px;
+      height: 70px;
+      border-radius: 50%;
+      background: #ffffff;
+      border: 3px solid #9BAE9A;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: 'Great Vibes', cursive;
+      font-size: 28px;
+      color: #6F8F6A;
+    }
 
-  .timeline::before {
-    left: 25px;
-  }
+    .timeline-icon {
+      position: absolute;
+      left: 95px;
+      top: 12px;
+      width: 40px;
+      height: 40px;
+      object-fit: contain;
+    }
 
-  .timeline-time {
-    width: 55px;
-    height: 55px;
-    font-size: 20px;
-    left: 25px;
-  }
+    .timeline-content {
+      margin-left: 150px;
+      font-size: 28px;
+      font-family: 'Great Vibes', cursive;
+      color: #3F4F3D;
+      line-height: 1.4;
+    }
 
-  .timeline-icon {
-    left: 80px;
-    width: 32px;
-    height: 32px;
-  }
-
-  .timeline-content {
-    margin-left: 120px;
-    font-size: 22px;
-  }
-}
-
-    
     body {
       min-height: 100vh;
       margin: 0;
       background-image: url('tlo/tlo1.png');
-      background-repeat: repeat; 
+      background-repeat: repeat;
       background-color: rgba(255, 255, 255, 0.7);
       background-blend-mode: lighten;
     }
 
-    /* HEADER */
     .header {
       background: rgba(255, 255, 255, 0.7);
       padding: 80px 40px 20px;
@@ -148,7 +134,6 @@
       margin: 0;
     }
 
-    /* ZDJĘCIE PARy */
     .photo-container {
       text-align: center;
       margin: 30px 0;
@@ -162,7 +147,6 @@
       box-shadow: 0 4px 12px rgba(0,0,0,0.2);
     }
 
-    /* COUNTDOWN */
     #countdown {
       font-family: 'Great Vibes', cursive;
       font-size: 70px;
@@ -174,21 +158,17 @@
       border-radius: 16px;
     }
 
-    /* BLOK TEKST + ZDJĘCIE */
-
-.right {
-  width: 100%;
-  box-sizing: border-box;
-  font-family: 'Great Vibes', cursive;
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  gap: 40px;
-
-  background: rgba(255, 255, 255, 0.7);
-  padding: 40px;
-}
-
+    .right {
+      width: 100%;
+      box-sizing: border-box;
+      font-family: 'Great Vibes', cursive;
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      gap: 40px;
+      background: rgba(255, 255, 255, 0.7);
+      padding: 40px;
+    }
 
     .text-box {
       flex: 1;
@@ -206,42 +186,38 @@
       text-align: left;
     }
 
-    
-.text-box h3 {
-  font-size: 56px;
-  margin-bottom: 30px;
-  font-family: 'Great Vibes', cursive;
-  text-align: center;
-  background: rgba(255, 255, 255, 0.7);
-}
-
+    .text-box h3 {
+      font-size: 56px;
+      margin-bottom: 30px;
+      font-family: 'Great Vibes', cursive;
+      text-align: center;
+      background: rgba(255, 255, 255, 0.7);
+    }
 
     .right img {
       flex: 1;
       max-width: 50%;
       border-radius: 16px;
     }
-  /* GUZIK GOOGLE */
 
-    .btn-calendar{
-  display:inline-block;
-  margin-top: 14px
-  padding:14px 22px;
-  border-radius:14px;
-  background: rgba(255,255,255,0.7);
-  color:#000;
-  text-decoration:none;
-  font-weight:600;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
-  transition: transform .15s ease, box-shadow .15s ease;
-}
-.btn-calendar:hover{
-  transform: translateY(-2px);
-  box-shadow: 0 8px 18px rgba(0,0,0,0.18);
-}
-    
+    .btn-calendar {
+      display:inline-block;
+      margin-top: 14px;
+      padding:14px 22px;
+      border-radius:14px;
+      background: rgba(255,255,255,0.7);
+      color:#000;
+      text-decoration:none;
+      font-weight:600;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+      transition: transform .15s ease, box-shadow .15s ease;
+    }
 
-    /* STOPKA */
+    .btn-calendar:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 8px 18px rgba(0,0,0,0.18);
+    }
+
     .footer {
       margin-top: 40px;
       font-family: 'Great Vibes', cursive;
@@ -251,7 +227,6 @@
       background: rgba(255,255,255,0.7);
     }
 
-    /* RESPONSYWNOŚĆ */
     @media (max-width: 768px) {
       .right {
         flex-direction: column;
@@ -261,6 +236,38 @@
       .text-box h2,
       .text-box p {
         text-align: center;
+      }
+
+      .info-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    @media (max-width: 600px) {
+      .timeline {
+        padding-left: 50px;
+      }
+
+      .timeline::before {
+        left: 25px;
+      }
+
+      .timeline-time {
+        width: 55px;
+        height: 55px;
+        font-size: 20px;
+        left: 25px;
+      }
+
+      .timeline-icon {
+        left: 80px;
+        width: 32px;
+        height: 32px;
+      }
+
+      .timeline-content {
+        margin-left: 120px;
+        font-size: 22px;
       }
     }
   </style>
@@ -280,189 +287,168 @@
     <div id="countdown"></div>
   </div>
 
- 
-<div class="right">
-  <div class="text-box">
-    <h2>Elo Elo wbijajcie na wesele!</h2>
-
-    <p>
-      17.10.2026 w Pobiedniku Wielkim
-    </p>
-
-    <a class="btn-calendar"
-       target="_blank"
-       rel="noopener"
-       href="https://calendar.google.com/calendar/render?action=TEMPLATE&text=Wesele%20Piotrka%20i%20Patrycji&dates=20261017T160000/20261018T040000&ctz=Europe/Warsaw&details=Wesele%20i%20ceremonia%20zaslubin%20Piotra%20i%20Patrycji.%0A%0AData%3A%2017.10.2026%2016%3A00%20-%2018.10.2026%2004%3A00%0AMiejsce%3A%20Szlachecki%20Dwor%20Pobiednik%20Wielki%0ALokalizacja%20(mapy)%3A%20https%3A%2F%2Fwww.google.com%2Fmaps%2Fplace%2F%2Fdata%3D%214m2%213m1%211s0x4716486f0e34b97d%3A0x63b6553e543f997e%3Fsa%3DX%26ved%3D1t%3A8290%26ictx%3D111&location=Szlachecki%20Dwor%20Pobiednik%20Wielki&sf=true&output=xml">
-      Dodaj do Google Kalendarza
-    </a>
-  </div>
-    <img src="foto1.jpg" alt="Zdjęcie">
-  
-  </div>
-<!-- TUTAJ JEST SEKCJA ZE ZDJECIEM PO LEWEJ -->
   <div class="right">
-  <img src="foto1.jpg" alt="Zdjęcie">
+    <div class="text-box">
+      <h2>Elo Elo wbijajcie na wesele!</h2>
+      <p>17.10.2026 w Pobiedniku Wielkim</p>
+      <a class="btn-calendar"
+         target="_blank"
+         rel="noopener"
+         href="https://calendar.google.com/calendar/render?action=TEMPLATE&text=Wesele%20Piotrka%20i%20Patrycji&dates=20261017T160000/20261018T040000&ctz=Europe/Warsaw&details=Wesele%20i%20ceremonia%20zaslubin%20Piotra%20i%20Patrycji.%0A%0AData%3A%2017.10.2026%2016%3A00%20-%2018.10.2026%2004%3A00%0AMiejsce%3A%20Szlachecki%20Dwor%20Pobiednik%20Wielki%0ALokalizacja%20(mapy)%3A%20https%3A%2F%2Fwww.google.com%2Fmaps%2Fplace%2F%2Fdata%3D%214m2%213m1%211s0x4716486f0e34b97d%3A0x63b6553e543f997e%3Fsa%3DX%26ved%3D1t%3A8290%26ictx%3D111&location=Szlachecki%20Dwor%20Pobiednik%20Wielki&sf=true&output=xml">
+        Dodaj do Google Kalendarza
+      </a>
+    </div>
+    <img src="foto1.jpg" alt="Zdjęcie">
+  </div>
+
+  <div class="right">
+    <img src="foto1.jpg" alt="Zdjęcie">
+    <div class="text-box">
+      <h2>Nasza historia drugi prompt</h2>
+      <p>
+        To opowieść o miłości, która rosła z każdym dniem.
+        O dwóch sercach, które wybrały wspólną drogę,
+        i o chwili, którą z radością chcemy dzielić z Wami.
+      </p>
+    </div>
+  </div>
 
   <div class="text-box">
-    <h2>Nasza historia drugi prompt</h2>
-    <p>
-     To opowieść o miłości, która rosła z każdym dniem.
-O dwóch sercach, które wybrały wspólną drogę,
-i o chwili, którą z radością chcemy dzielić z Wami.
-    </p>
+    <h3>Ważne Info</h3>
   </div>
-</div>
 
-   <!-- WAZNE INFO --> 
+  <div class="info-grid">
+    <div class="info-item">
+      <img src="ico/bed.png" alt="Nocleg" class="info-icon">
+      <h3>Nocleg</h3>
+      <p>Istnieje możliwość noclegu w obiekcie – liczba miejsc ograniczona, jeśli potrzebujesz noclegu na miejscu daj nam znać przez formularz.</p>
+    </div>
+
+    <div class="info-item">
+      <img src="ico/camera.png" alt="Galeria zdjęć" class="info-icon">
+      <h3>Wspólna galeria zdjęć</h3>
+      <p>Puścimy na weselu w obiek telefon, którym każdy będzie mógł zrobić sobie selfie i nagrać dla nas życzenia!</p>
+    </div>
+
+    <div class="info-item">
+      <div class="info-icons">
+        <img src="ico/dress.png" alt="Dress Code" class="info-icon">
+        <img src="ico/dress2.png" alt="Dress Code 2" class="info-icon">
+      </div>
+      <h3>Dress code</h3>
+      <p>Jeśli chodzi o nas to możecie nawet przyjść w lampasach (ale koniecznie z trzema paskami) – bądźcie sobą.</p>
+    </div>
+
+    <div class="info-item">
+      <img src="ico/atrakcje.png" alt="Atrakcje" class="info-icon">
+      <h3>Atrakcje</h3>
+      <p>Fotobudka, barman, słodki stół, ciepły stół i zimna płyta.</p>
+    </div>
+
+    <div class="info-item">
+      <img src="ico/menu.png" alt="Menu" class="info-icon">
+      <h3>Menu</h3>
+      <p>Coming Soon!</p>
+    </div>
+
+    <div class="info-item">
+      <img src="ico/parking.png" alt="Parking" class="info-icon">
+      <h3>Parking</h3>
+      <p>Parking dostępny na terenie obiektu.</p>
+    </div>
+
+    <div class="info-item">
+      <img src="ico/dzieci.png" alt="Dzieci" class="info-icon">
+      <h3>Dzieci</h3>
+      <p>Zapraszamy bez dzieci, wyjątkiem są bobasy.</p>
+    </div>
+
+    <div class="info-item">
+      <img src="ico/mapy.png" alt="Mapka obiektu" class="info-icon">
+      <h3>Mapka obiektu</h3>
+      <p>Tu znajdziesz mapę obiektu.</p>
+    </div>
+  </div>
 
   <div class="text-box">
-    <h3>Wazne Info</h3>
-  </div>
-  
-
-  
-<div class="info-grid">
-
-  <div class="info-item">
-    <img src="ico/bed.png" alt="Nocleg" class="info-icon">
-    <h3>Nocleg</h3>
-    <p>Istnieje możliwość noclegu w obiekcie – liczba miejsc ograniczona, jeśli potrzebujesz noclegu na miejscu daj nam znać przez formularz.</p>
+    <h3>Potwierdzenie obecności</h3>
   </div>
 
-  <div class="info-item">
-    <img src="ico/camera.png" alt="Galeria zdjęć" class="info-icon">
-    <h3>Wspólna galeria zdjęć</h3>
-    <p>Puścimy na weseleu w obiek telefon, którym każdy będzie mógł zrobić sobie selfie i nagrać dla nas życzenia!</p>
-  </div>
-
-<div class="info-item">
-  <div class="info-icons">
-    <img src="ico/dress.png" alt="Dress Code" class="info-icon">
-    <img src="ico/dress2.png" alt="Dress Code 2" class="info-icon">
-  </div>
-  <h3>Dress code</h3>
-  <p>Jeśli chodzi o nas to możecie nawet przyjść w lampasach (ale koniecznie z trzema paskami) – bądźcie sobą</p>
-</div>
-
-   
-  <div class="info-item">
-    <img src="ico/atrakcje.png" alt="Atrakcje" class="info-icon">
-    <h3>Atrakcje</h3>
-    <p>Fotobudka, barman, słodki stół, ciepły stół i zimna płyta</p>
-  </div>
-
-  <div class="info-item">
-    <img src="ico/menu.png" alt="Menu" class="info-icon">
-    <h3>Menu</h3>
-    <p>Coming Soon!</p>
-  </div>
-
-  <div class="info-item">
-    <img src="ico/parking.png" alt="Parking" class="info-icon">
-    <h3>Parking</h3>
-    <p>Parking dostępny na terenie obiektu</p>
-  </div>
-
-  <div class="info-item">
-    <img src="ico/dzieci.png" alt="Dzieci" class="info-icon">
-    <h3>Dzieci</h3>
-    <p>Zapraszamy bez dzieci, wyjątkiem są bobasy</p>
-  </div>
-
-  <div class="info-item">
-    <img src="ico/mapy.png" alt="Mapka obiektu" class="info-icon">
-    <h3>Mapka obiektu</h3>
-    <p>Tu znajdziesz mape obiektu</p>
-  </div>
-
-</div>
-
-    <!--FORMULARZ-->
-    
-  <div class="text-box">
-  <h3>Potwierdzenie obecności</h3>
-  </div>
   <div class="form-section">
-  <iframe
-    src="https://docs.google.com/forms/d/e/1FAIpQLSeU-76scHjjLoXpXhnbuAVjlhxnZsFDJinIpGXxk-KjkdKfjg/viewform?embedded=true"
-    width="100%"
-    height="900"
-    frameborder="0"
-    marginheight="0"
-    marginwidth="0">
-    Ładowanie formularza…
-  </iframe>
-</div>
-  
+    <iframe
+      src="https://docs.google.com/forms/d/e/1FAIpQLSeU-76scHjjLoXpXhnbuAVjlhxnZsFDJinIpGXxk-KjkdKfjg/viewform?embedded=true"
+      width="100%"
+      height="900"
+      frameborder="0"
+      marginheight="0"
+      marginwidth="0">
+      Ładowanie formularza…
+    </iframe>
+  </div>
+
   <div class="text-box">
-    <h3>Harmonogram Imprezy</h3>
+    <h3>Harmonogram imprezy</h3>
   </div>
-  
+
   <div class="timeline-section">
-  <h3>Harmonogram dnia</h3>
+    <h3>Harmonogram dnia</h3>
 
-  <div class="timeline">
+    <div class="timeline">
+      <div class="timeline-item">
+        <div class="timeline-time">18:00</div>
+        <img src="ico/rings.png" class="timeline-icon" alt="">
+        <div class="timeline-content">Ceremonia</div>
+      </div>
 
-    <div class="timeline-item">
-      <div class="timeline-time">18:00</div>
-      <img src="ico/rings.png" class="timeline-icon" alt="">
-      <div class="timeline-content">Ceremonia</div>
+      <div class="timeline-item">
+        <div class="timeline-time">19:00</div>
+        <img src="ico/dance.png" class="timeline-icon" alt="">
+        <div class="timeline-content">Pierwszy taniec</div>
+      </div>
+
+      <div class="timeline-item">
+        <div class="timeline-time">20:00</div>
+        <img src="ico/dinner.png" class="timeline-icon" alt="">
+        <div class="timeline-content">Pierwszy posiłek</div>
+      </div>
+
+      <div class="timeline-item">
+        <div class="timeline-time">21:00</div>
+        <img src="ico/heart.png" class="timeline-icon" alt="">
+        <div class="timeline-content">Życzenia</div>
+      </div>
+
+      <div class="timeline-item">
+        <div class="timeline-time">22:00</div>
+        <img src="ico/dinner2.png" class="timeline-icon" alt="">
+        <div class="timeline-content">Drugi posiłek</div>
+      </div>
+
+      <div class="timeline-item">
+        <div class="timeline-time">23:00</div>
+        <img src="ico/dinner3.png" class="timeline-icon" alt="">
+        <div class="timeline-content">Trzeci posiłek</div>
+      </div>
+
+      <div class="timeline-item">
+        <div class="timeline-time">00:00</div>
+        <img src="ico/soup.png" class="timeline-icon" alt="">
+        <div class="timeline-content">Barszczyk</div>
+      </div>
+
+      <div class="timeline-item">
+        <div class="timeline-time">01:00</div>
+        <img src="ico/confetti.png" class="timeline-icon" alt="">
+        <div class="timeline-content">Oczepiny</div>
+      </div>
     </div>
-
-    <div class="timeline-item">
-      <div class="timeline-time">19:00</div>
-      <img src="ico/dance.png" class="timeline-icon" alt="">
-      <div class="timeline-content">Pierwszy taniec</div>
-    </div>
-
-    <div class="timeline-item">
-      <div class="timeline-time">20:00</div>
-      <img src="ico/dinner.png" class="timeline-icon" alt="">
-      <div class="timeline-content">Pierwszy posiłek</div>
-    </div>
-
-    <div class="timeline-item">
-      <div class="timeline-time">21:00</div>
-      <img src="ico/heart.png" class="timeline-icon" alt="">
-      <div class="timeline-content">Życzenia</div>
-    </div>
-
-    <div class="timeline-item">
-      <div class="timeline-time">22:00</div>
-      <img src="ico/dinner2.png" class="timeline-icon" alt="">
-      <div class="timeline-content">Drugi posiłek</div>
-    </div>
-
-    <div class="timeline-item">
-      <div class="timeline-time">23:00</div>
-      <img src="ico/dinner3.png" class="timeline-icon" alt="">
-      <div class="timeline-content">Trzeci posiłek</div>
-    </div>
-
-    <div class="timeline-item">
-      <div class="timeline-time">00:00</div>
-      <img src="ico/soup.png" class="timeline-icon" alt="">
-      <div class="timeline-content">Barszczyk</div>
-    </div>
-
-    <div class="timeline-item">
-      <div class="timeline-time">01:00</div>
-      <img src="ico/confetti.png" class="timeline-icon" alt="">
-      <div class="timeline-content">Oczepiny</div>
-    </div>
-
   </div>
-</div>
-
 
   <div class="footer">
     Z radością będziemy świętować ten dzień razem z Wami
   </div>
-  
+
   <script>
-
-
-    
     const weddingDate = new Date("2026-06-20T15:00:00").getTime();
 
     function updateCountdown() {
@@ -489,23 +475,3 @@ i o chwili, którą z radością chcemy dzielić z Wami.
 
 </body>
 </html>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
