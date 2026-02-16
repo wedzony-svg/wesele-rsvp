@@ -1,16 +1,7 @@
-<!DOCTYPE html>
-<html lang="pl">
-<head>
-  <meta charset="UTF-8">
-  <title>Potwierdzenie obecności – Nasze Wesele</title>
+<style>
+html { scroll-behavior: smooth; }
 
-  <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap" rel="stylesheet">
-
-  <style>
-    html { scroll-behavior: smooth; }
-
-    css
-
+/* Styl wspólny dla napisów */
 .styl-napisu {
   font-family: 'Great Vibes', cursive;
   font-size: 70px;
@@ -21,411 +12,206 @@
   padding: 20px 40px;
   border-radius: 16px;
 }
-  
-    body {
-      min-height: 100vh;
-      margin: 0;
-      background-image: url('tlo2.png');
-      background-repeat: repeat;
-      background-color: rgba(255, 255, 255, 0.9);
-    }
 
-    .header {
-      background: rgba(255, 255, 255, 0.9);
-      padding: 80px 40px 20px;
-      text-align: center;
-    }
+body {
+  min-height: 100vh;
+  margin: 0;
+  background-image: url('tlo2.png');
+  background-repeat: repeat;
+  background-color: rgba(255, 255, 255, 0.9);
+}
 
-    .header h1 {
-      font-family: 'Great Vibes', cursive;
-      font-size: 80px;
-      margin: 0;
-    }
+.header {
+  background: rgba(255, 255, 255, 0.9);
+  padding: 80px 40px 20px;
+  text-align: center;
+}
 
-    .photo-container {
-      text-align: center;
-      margin: 30px 0;
-    }
+.header h1 {
+  font-family: 'Great Vibes', cursive;
+  font-size: 80px;
+  margin: 0;
+}
 
-    .photo-container img {
-      width: 400px;
-      height: 400px;
-      object-fit: cover;
-      border-radius: 50%;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.2);
-    }
+.photo-container {
+  text-align: center;
+  margin: 30px 0;
+}
 
-    #countdown {
-      font-family: 'Great Vibes', cursive;
-      font-size: 70px;
-      text-align: center;
-      margin: 20px auto;
-      background: rgba(255,255,255,0.9);
-      display: inline-block;
-      padding: 20px 40px;
-      border-radius: 16px;
-    }
+.photo-container img {
+  width: 400px;
+  height: 400px;
+  object-fit: cover;
+  border-radius: 50%;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+}
 
-    /* --- SEKCJA RIGHT (tekst + zdjęcie + guziki) --- */
+#countdown {
+  font-family: 'Great Vibes', cursive;
+  font-size: 70px;
+  text-align: center;
+  margin: 20px auto;
+  background: rgba(255,255,255,0.9);
+  display: inline-block;
+  padding: 20px 40px;
+  border-radius: 16px;
+}
 
-    .right {
-      width: 100%;
-      box-sizing: border-box;
-      display: flex;
-      flex-direction: row;
-      align-items: center;
-      gap: 40px;
-      background: rgba(255, 255, 255, 0.9);
-      padding: 40px;
-    }
+/* --- SEKCJA RIGHT --- */
 
-    .right img {
-      flex: 1;
-      max-width: 35%;
-      border-radius: 16px;
-    }
+.right {
+  width: 100%;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 40px;
+  background: rgba(255, 255, 255, 0.9);
+  padding: 40px;
+}
 
-    .text-box {
-      flex: 1;
-    }
+.right img {
+  flex: 1;
+  max-width: 35%;
+  border-radius: 16px;
+}
 
-    .text-box h2 {
-      font-size: 60px;
-      margin-top: 0;
-      text-align: left;
-      font-family: 'Great Vibes', cursive;
-    }
+.text-box {
+  flex: 1;
+}
 
-    .text-box p {
-      font-size: 40px;
-      line-height: 1.6;
-      text-align: left;
-      font-family: sans-serif; 
-      font-style: normal;
-    }
+.text-box h2 {
+  font-size: 60px;
+  margin-top: 0;
+  text-align: left;
+  font-family: 'Great Vibes', cursive;
+}
 
 .text-box p {
+  font-size: 40px;
+  line-height: 1.6;
+  text-align: left;
+  font-family: sans-serif;
   font-style: normal;
 }
-    .btn-calendar {
-      display:inline-block;
-      margin-top: 14px;
-      margin-right: 20px;
-      padding:14px 22px;
-      border-radius:14px;
-      background: rgba(255,255,255,0.9);
-      color:#000;
-      text-decoration:none;
-      font-weight:600;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.15);
-      transition: transform .15s ease, box-shadow .15s ease;
-      font-size: 40px;
-      font-family: 'Great Vibes';
-    }
 
-    .btn-calendar:hover {
-      transform: translateY(-2px);
-      box-shadow: 0 8px 18px rgba(0,0,0,0.18);
-    }
-
-    /* --- INFO GRID --- */
-
-    .text-box h3 {
-      font-size: 56px;
-      margin-bottom: 30px;
-      font-family: 'Great Vibes', cursive;
-      text-align: center;
-      background: rgba(255, 255, 255, 0.9);
-    }
-
-    .info-grid {
-      display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      gap: 30px;
-      margin: 60px auto;
-      padding: 40px;
-      background: rgba(255, 255, 255, 0.9);
-    }
-
-    .info-item {
-      text-align: center;
-      padding: 20px;
-    }
-
-    .info-icon {
-      width: 80px;
-      height: 80px;
-      object-fit: contain;
-      margin-bottom: 15px;
-    }
-
-    .info-item h3 {
-      font-family: 'Great Vibes', cursive;
-      font-size: 48px;
-      margin: 10px 0;
-    }
-
-    .info-item p {
-      font-size: 30px;
-      line-height: 1.5;
-    }
-
-    /* --- FORMULARZ --- */
-
-    .form-section {
-      max-width: 900px;
-      margin: 60px auto;
-      padding: 40px;
-      background: rgba(255,255,255,0.9);
-      border-radius: 16px;
-    }
-
-    .footer {
-      margin-top: 40px;
-      font-family: 'Great Vibes', cursive;
-      font-size: 60px;
-      text-align: center;
-      padding: 30px;
-      background: rgba(255,255,255,0.9);
-    }
-
-    @media (max-width: 768px) {
-      .right {
-        flex-direction: column;
-        text-align: center;
-      }
-
-      .right img {
-        max-width: 100%;
-      }
-
-      .text-box h2,
-      .text-box p {
-        text-align: center;
-      }
-
-      .info-grid {
-        grid-template-columns: 1fr;
-      }
-      .photo-grid {
-  display: grid;
-  grid-template-columns: 1fr 1fr; /* 2 kolumny */
-  grid-template-rows: 1fr 1fr;    /* 2 wiersze */
-  gap: 10px;                      /* odstępy między zdjęciami */
-  width: 100%;
-  max-width: 400px;               /* możesz zmienić */
-
-
-.photo-grid img {
-  width: 100%;
-  height: auto;
-  object-fit: cover;
-  border-radius: 8px;             /* opcjonalnie zaokrąglenie */
+.btn-calendar {
+  display:inline-block;
+  margin-top: 14px;
+  margin-right: 20px;
+  padding:14px 22px;
+  border-radius:14px;
+  background: rgba(255,255,255,0.9);
+  color:#000;
+  text-decoration:none;
+  font-weight:600;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+  transition: transform .15s ease, box-shadow .15s ease;
+  font-size: 40px;
+  font-family: 'Great Vibes';
 }
 
-    }
-    
-  </style>
-</head>
+.btn-calendar:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 18px rgba(0,0,0,0.18);
+}
 
-<body>
+/* --- INFO GRID --- */
 
-  <div class="header">
-    <h1>Zapraszamy na wesele!</h1>
-  </div>
+.text-box h3 {
+  font-size: 56px;
+  margin-bottom: 30px;
+  font-family: 'Great Vibes', cursive;
+  text-align: center;
+  background: rgba(255, 255, 255, 0.9);
+}
 
-  <div class="photo-container">
-    <img src="IMG_20250929_151817814_HDR_AE.jpg" alt="Zdjęcie pary młodej">
-  </div>
+.info-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 30px;
+  margin: 60px auto;
+  padding: 40px;
+  background: rgba(255, 255, 255, 0.9);
+}
 
-<div class="styl-napisu">Do Wesela Pozostało:</div>
+.info-item {
+  text-align: center;
+  padding: 20px;
+}
 
-  <!-- SEKCJA RIGHT — Zdjecie po prawej opis z lewej. OPCJA B -->
-  <div class="right">
-  <div class="text-box">
-    <h2>Gdzie i kiedy?</h2>
-    <p>
-      17 października 2027 roku spotykamy się w Szlacheckim Dworze w Pobiedniku Wielkim.
-      Dokładną lokalizację znajdziecie w sekcji „Ważne informacje”. <br>
-      Prosimy o potwierdzenie obecności do 1 lipca 2026 za pomocą formularza — przycisk „Potwierdź obecność” znajduje się poniżej. <br>
-      Nawigacja:
-    </p>
+.info-icon {
+  width: 80px;
+  height: 80px;
+  object-fit: contain;
+  margin-bottom: 15px;
+}
 
-    <a class="btn-calendar"
-       target="_blank"
-       rel="noopener"
-       href="https://calendar.google.com/calendar/render?action=TEMPLATE&text=Wesele%20Piotrka%20i%20Patrycji&dates=20261017T160000/20261018T040000&ctz=Europe/Warsaw">
-      Dodaj do Google Kalendarza
-    </a><br>
+.info-item h3 {
+  font-family: 'Great Vibes', cursive;
+  font-size: 48px;
+  margin: 10px 0;
+}
 
-    <a class="btn-calendar" href="#formularz">
-      Potwierdź obecność
-    </a><br>
+.info-item p {
+  font-size: 30px;
+  line-height: 1.5;
+}
 
-    <a class="btn-calendar" href="#wazne">
-      Ważne informacje
-    </a><br>
+/* --- FORMULARZ --- */
 
-    <a class="btn-calendar" href="#kontakt">
-      Kontakt do Państwa Młodych
-    </a>
-  </div>
+.form-section {
+  max-width: 900px;
+  margin: 60px auto;
+  padding: 40px;
+  background: rgba(255,255,255,0.9);
+  border-radius: 16px;
+}
 
-  <img src="Gruzja49.jpg" alt="Zdjęcie">
-</div>
+.footer {
+  margin-top: 40px;
+  font-family: 'Great Vibes', cursive;
+  font-size: 60px;
+  text-align: center;
+  padding: 30px;
+  background: rgba(255,255,255,0.9);
+}
 
-   <div class="right" id="kontakt">
+/* --- MOBILE --- */
 
-  <div class="photo-grid">
-    <img src="foto/1.jpeg" alt="1">
-    <img src="foto/2.jpeg" alt="2">
-    <img src="foto/3.jpeg" alt="3">
-    <img src="foto/4.jpeg" alt="4">
-  </div>
+@media (max-width: 768px) {
+  .right {
+    flex-direction: column;
+    text-align: center;
+  }
 
-  <div class="text-box">
-    <h2>Kontakt do Państwa Młodych</h2>
-    <p>
-      Patrycja - 608750709 (sms/telefon/whatsapp) patrycjalango@gmail.com <br>
-      Piotr - 607655679 (sms/telefon/whatsapp) wedzony@gmail.com <br>
-    </p>
-  </div>
+  .right img {
+    max-width: 100%;
+  }
 
-</div>
+  .text-box h2,
+  .text-box p {
+    text-align: center;
+  }
 
-  
- <div class="text-box">
-  <h3>Ważne Info</h3>
-</div>
+  .info-grid {
+    grid-template-columns: 1fr;
+  }
 
-<div class="info-grid" id="wazne">
+  .photo-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    gap: 10px;
+    width: 100%;
+    max-width: 400px;
+  }
 
-  <div class="info-item">
-    <img src="ico/bed.png" alt="Nocleg" class="info-icon">
-    <h3>Nocleg</h3>
-    <p>Istnieje możliwość noclegu w obiekcie – liczba miejsc ograniczona. Dajcie proszę znać w formularzu, czy potrzebujecie noclegu. </p>
-  </div>
-
-  <div class="info-item">
-    <img src="ico/camera.png" alt="Galeria zdjęć" class="info-icon">
-    <h3>Wspólna galeria zdjęć</h3>
-    <p>Telefon do selfie i nagrywania życzeń będzie dostępny na weselu.</p>
-  </div>
-
-  <div class="info-item">
-    <div class="info-icons">
-      <img src="ico/dress.png" alt="Dress Code" class="info-icon">
-      <img src="ico/dress2.png" alt="Dress Code 2" class="info-icon">
-    </div>
-    <h3>Dress code</h3>
-    <p>Bądźcie sobą — jeśli chodzi o nas to możecie przyjść nawet w lampasach - ale koniecznie z trzema paskami.</p>
-  </div>
-
-  <div class="info-item">
-    <img src="ico/atrakcje.png" alt="Atrakcje" class="info-icon">
-    <h3>Atrakcje</h3>
-    <p>Fotobudka, barman, słodki stół i wiele więcej.</p>
-  </div>
-
-  <div class="info-item">
-    <img src="ico/menu.png" alt="Menu" class="info-icon">
-    <h3>Menu</h3>
-    <p>Będzie po polsku ale z nowoczesnymi akcentami.</p>
-  </div>
-
-  <div class="info-item">
-    <img src="ico/parking.png" alt="Parking" class="info-icon">
-    <h3>Parking</h3>
-    <p>Parking dostępny na terenie obiektu.</p>
-  </div>
-
-  <div class="info-item">
-    <img src="ico/dzieci.png" alt="Dzieci" class="info-icon">
-    <h3>Dzieci</h3>
-    <p>Zapraszamy bez dzieci, ale najmniejsze maluszki są jak najbardziej mile widziane.</p>
-  </div>
-
-<div class="info-item">
-  <a href="https://www.google.com/maps/place/Szlachecki+Dw%C3%B3r/@50.0832439,20.2064642,17z/data=!3m1!4b1!4m9!3m8!1s0x4716486f0e34b97d:0x63b6553e543f997e!5m2!4m1!1i2!8m2!3d50.0832439!4d20.2090391!16s%2Fg%2F11qp2mddkq?entry=ttu&g_ep=EgoyMDI2MDIxMC4wIKXMDSoASAFQAw%3D%3D" target="_blank" rel="noopener">
-    <img src="ico/mapy.png" alt="Mapka obiektu" class="info-icon">
-  </a>
-  <h3>Lokalizacja</h3>
-  <p>Kliknij ikonę, aby otworzyć mapę Google.</p>
-</div>
-
-
-</div>
- 
-
-  <div class="text-box">
-    <h3>Potwierdzenie obecności</h3>
-  </div>
-
-  <div class="form-section" id="formularz">
-    <iframe
-      src="https://docs.google.com/forms/d/e/1FAIpQLSeU-76scHjjLoXpXhnbuAVjlhxnZsFDJinIpGXxk-KjkdKfjg/viewform?embedded=true"
-      width="100%"
-      height="1600"
-      frameborder="0">
-    </iframe>
-  </div>
-
-  <div class="footer">
-    Z radością będziemy świętować ten dzień razem z Wami
-  </div>
-  
-  <script>
-    const weddingDate = new Date("2026-10-17T16:00:00+02:00").getTime();
-
-    function updateCountdown() {
-      const now = new Date().getTime();
-      const distance = weddingDate - now;
-
-      if (distance < 0) {
-        document.getElementById("countdown").innerHTML = "To już dziś!";
-        return;
-      }
-
-      const days = Math.floor(distance / (1000 * 60 * 60 * 24));
-      const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-      const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-      const seconds = Math.floor((distance % (1000 * 60)) / 1000);
-
-      document.getElementById("countdown").innerHTML =
-        `${days} dni ${hours} godz ${minutes} min ${seconds} sek`;
-    }
-
-    setInterval(updateCountdown, 1000);
-    updateCountdown();
-  </script>
-
-</body>
-</html>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+  .photo-grid img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    border-radius: 8px;
+  }
+}
+</style>
