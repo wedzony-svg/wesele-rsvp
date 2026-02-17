@@ -281,21 +281,23 @@
       .info-grid {
         grid-template-columns: 1fr;
       }
-      .photo-grid {
+      
+   .photo-grid {
   display: grid;
-  grid-template-columns: 1fr 1fr; /* 2 kolumny */
-  grid-template-rows: 1fr 1fr;    /* 2 wiersze */
-  gap: 10px;                      /* odstępy między zdjęciami */
-  width: 50%;
-  max-width: 200px;               /* możesz zmienić */
+  grid-template-columns: repeat(2, 1fr); 
+  grid-template-rows: repeat(2, 1fr);
+  gap: 10px;
+  width: 50%;      /* stała szerokość */
+  height: auto;     /* stała wysokość = kwadrat */
 }
 
 .photo-grid img {
   width: 100%;
-  height: auto;
-  object-fit: cover;
-  border-radius: 8px;             /* opcjonalnie zaokrąglenie */
+  height: 100%;
+  object-fit: cover;  /* przycina zdjęcia do kwadratu */
+  border-radius: 8px;
 }
+
 
     }
     
@@ -351,20 +353,6 @@ w Szlacheckim Dworze w Pobiedniku Wielkim.
   </a>
 </div>
     </div>
-
-
-    <p>
-Dokładny adres znajdziecie poniżej w sekcji „Ważne informacje”
-    </p>
-    
-    <a class="btn-calendar" href="#wazne">
-      Ważne informacje
-    </a><br>
-
-    <a class="btn-calendar" href="#kontakt">
-      Kontakt do Państwa Młodych
-    </a>
-  </div>
 
   <img src="Gruzja49.jpg" alt="Zdjęcie">
 </div>
@@ -519,6 +507,7 @@ do 01.09.2026 r. za pomocą poniższego formularza.
 
 </body>
 </html>
+
 
 
 
