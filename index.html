@@ -214,25 +214,11 @@
       background: rgba(255, 255, 255, 0.9);
     }
 
-    .info-grid {
-      display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      gap: 30px;
-      padding: 40px;
-      background: rgba(255, 255, 255, 0.9);
-    }
+.info-grid { display: grid; grid-template-columns: repeat(2, 1fr); /* 2 kolumny */ gap: 40px; margin-top: 30px; }
 
-    .info-item {
-      text-align: center;
-      padding: 20px;
-    }
+.info-item { text-align: center; /* wszystko wyśrodkowane */ display: flex; flex-direction: column; align-items: center; gap: 12px; /* odstęp między ikoną, tytułem i tekstem */ }
 
-    .info-icon {
-      width: 80px;
-      height: 80px;
-      object-fit: contain;
-      margin-bottom: 15px;
-    }
+.info-icon { width: 70px; /* większe ikony */ height: auto; }
 
     .info-item h3 {
       font-family: 'Great Vibes', cursive;
@@ -240,10 +226,7 @@
       margin: 10px 0;
     }
 
-    .info-item p {
-      font-size: 30px;
-      line-height: 1.5;
-    }
+.info-item p { font-size: 20px; /* większy tekst */ line-height: 1.4; margin: 0; max-width: 300px; /* żeby tekst nie był za szeroki */ }
 
     /* --- FORMULARZ --- */
 
@@ -510,6 +493,7 @@ Piotr +48607655679  wedzony@gmail.com <br>
 
 </body>
 </html>
+
 
 
 
