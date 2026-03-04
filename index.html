@@ -11,11 +11,39 @@
 
 
   <style>
-
+ /* grid prezenty */
+    
     .icons-grid { display: grid; grid-template-columns: repeat(3, 1fr); /* 3 kolumny */ grid-template-rows: repeat(2, auto); /* 2 rzędy */ gap: 10px; /* odstępy między ikonami */ justify-items: center; /* wyśrodkowanie ikon w komórkach */ align-items: center; margin-top: 20px; } 
     .icon { width: 150px; /* bezpieczny rozmiar */ height: auto; max-width: 100%; display: block; }
     .cell { display: flex; gap: 10px; /* odstęp między ikonami */ justify-content: center; align-items: center; }
 
+     /* grid kontakt */
+    
+    .grid-3x3 {
+  display: grid;
+  grid-template-columns: 80px 1fr 1fr; /* 1 kolumna na ikony + 2 kolumny na treść */
+  grid-template-rows: repeat(3, auto); /* 3 wiersze */
+  gap: 15px;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.grid-icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.grid-icon img {
+  width: 50px;   /* rozmiar ikony */
+  height: auto;
+}
+
+.grid-cell {
+  padding: 5px 0;
+}
+
+    
     html { scroll-behavior: smooth; }
 
     body {
@@ -347,14 +375,41 @@ do 01.09.2026 r. za pomocą poniższego formularza. <br>
 </div>
   <!-- SEKCJA KONTAKT TO PAŃSTWA MŁODYCH -->
 
-  <div class="right">
+<div class="right">
   <div class="text-box">
     <h2>Kontakt do nas</h2>
-    <h2>TUTAJ MA BYC GRID</h2>
-  <!-- PRAWA STRONA: ZDJĘCIE -->
-  <img src="foto\5.jpeg" alt="Zdjęcie" class="right-photo">
-</div>
+
+    <div class="grid-3x3">
+
+      <!-- Wiersz 1 -->
+      <div class="grid-icon">
+        <img src="ico/kwiaty.png" alt="">
+      </div>
+      <div class="grid-cell">Tekst kolumna 2, wiersz 1</div>
+      <div class="grid-cell">Tekst kolumna 3, wiersz 1</div>
+
+      <!-- Wiersz 2 -->
+      <div class="grid-icon">
+        <img src="ico/wino.png" alt="">
+      </div>
+      <div class="grid-cell">Tekst kolumna 2, wiersz 2</div>
+      <div class="grid-cell">Tekst kolumna 3, wiersz 2</div>
+
+      <!-- Wiersz 3 -->
+      <div class="grid-icon">
+        <img src="ico/prezent.png" alt="">
+      </div>
+      <div class="grid-cell">Tekst kolumna 2, wiersz 3</div>
+      <div class="grid-cell">Tekst kolumna 3, wiersz 3</div>
+
+    </div>
+
   </div>
+
+  <!-- PRAWA STRONA: ZDJĘCIE -->
+  <img src="foto/5.jpeg" alt="Zdjęcie" class="right-photo">
+</div>
+
 
     <!-- SEKCJA PREZENTÓW -->
   
@@ -484,6 +539,7 @@ do 01.09.2026 r. za pomocą poniższego formularza. <br>
 
 </body>
 </html>
+
 
 
 
