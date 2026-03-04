@@ -22,14 +22,22 @@
   display: flex;
   align-items: center;
   justify-content: center; /* wyśrodkowanie całego rzędu */
-  gap: 25px; /* odstępy między ikonami */
+  gap: 90px; /* odstępy między ikonami */
 }
 
-.icon { width: 25px !important; height: auto !important; max-width: 30px !important; }
+    .icons-row-btm {
+  display: flex;
+  align-items: center;
+  justify-content: center; /* wyśrodkowanie całego rzędu */
+  gap: 90px; /* odstępy między ikonami */
+  margin-top: 60px; /* odstęp od górnej linii */
+}
+
+.icon { width: 25px !important; height: auto !important; max-width: 300px !important; }
 }
 
 .icon-separator {
-  font-size: 32px;
+  font-size: 100px; !important;
   font-weight: bold;
 }
 
@@ -434,7 +442,7 @@ Piotr +48607655679  wedzony@gmail.com <br>
     <img src="ico\whiskey.png" alt="Whiskey" class="icon">
   </div>
   <!-- DOLNY RZĄD -->
-  <div class="icons-row">
+  <div class="icons-row-btm">
     <img src="ico\prezent.png" alt="Prezent" class="icon">
     <span class="icon-separator">→</span>
     <img src="ico\koperta.png" alt="Koperta" class="icon">
@@ -555,6 +563,7 @@ Piotr +48607655679  wedzony@gmail.com <br>
 
 </body>
 </html>
+
 
 
 
