@@ -126,12 +126,33 @@
 .text-box p {
    font-family: 'Inter', sans-serif;
 }
-.btn-calendar { display: inline-block; padding: 28px 44px; border-radius: 14px; background: rgba(255,255,255,0.9); text-decoration: none; font-weight: 600; box-shadow: 0 4px 12px rgba(0,0,0,0.15); transition: transform .15s ease, box-shadow .15s ease; font-size: 120px; /* 2× większy tekst */ font-family: 'Great Vibes'; color: gold; }
+    .btn-calendar {
+      display:inline-block;
+      margin-top: 14px;
+      margin-right: 20px;
+      padding:14px 22px;
+      border-radius:14px;
+      background: rgba(255,255,255,0.9);
+      color:#000;
+      text-decoration:none;
+      font-weight:600;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+      transition: transform .15s ease, box-shadow .15s ease;
+      font-size: 60px;
+      font-family: 'Great Vibes';
+      color: gold;
+    }
 
   /* Ikona nad przyciskiem */ 
-.calendar-box { display: flex; flex-direction: column; align-items: center; margin-bottom: 30px; }
+    .calendar-box { display: flex; 
+                   flex-direction: column; 
+                   align-items: center; 
+                  }
 
-.calendar-icon { width: 80px; /* zmień jeśli chcesz większą ikonę */ height: auto; margin-bottom: 12px; }
+.calendar-icon { width: 60px;
+                height: auto;
+                margin-bottom: 10px; 
+               }
 
 .buttons-wrapper { display: flex; 
                   gap: 20px; 
@@ -309,34 +330,31 @@
       w Szlacheckim Dworze w Pobiedniku Wielkim.
     </h3>
 
-<!-- BUTTONY -->
-<div class="buttons-wrapper">
+    <!-- BUTTONY -->
+    <div class="buttons-wrapper">
 
-  <div class="calendar-box">
-    <img src="ico/kalendarz.png" class="calendar-icon" alt="Dodaj do kalendarza">
-    <a class="btn btn-calendar"
-       href="https://calendar.google.com/calendar/render?action=TEMPLATE&text=Wesele%20Piotrka%20i%20Patrycji&dates=20261017T160000/20261018T040000&ctz=Europe/Warsaw"
-       target="_blank"
-       rel="noopener">
-      Dodaj do Kalendarza
-    </a>
-  </div>
+      <div class="calendar-box">
+        <img src="ico/calendar.png" class="calendar-icon" alt="Kalendarz">
 
-  <div class="calendar-box">
-    <img src="ico/mapy.png" class="calendar-icon" alt="Lokalizacja">
-    <a class="btn btn-calendar"
-       href="https://www.google.com/maps/place/Szlachecki+Dw%C3%B3r/@50.0832439,20.2064642,17z"
-       target="_blank"
-       rel="noopener">
-      Lokalizacja
-    </a>
-  </div>
-
+        <a class="btn btn-calendar"
+           target="_blank"
+           rel="noopener"
+           href="https://calendar.google.com/calendar/render?action=TEMPLATE&text=Wesele%20Piotrka%20i%20Patrycji&dates=20261017T160000/20261018T040000&ctz=Europe/Warsaw">
+          Dodaj do Kalendarza
+        </a>
+      </div>
+<div class="calendar-box">
+        <img src="ico/mapy.png" class="calendar-icon" alt="Kalendarz">
+      <a class="btn btn-calendar"
+         target="_blank"
+         <a href="https://www.google.com/maps/place/Szlachecki+Dw%C3%B3r/@50.0832439,20.2064642,17z/data=!3m1!4b1!4m9!3m8!1s0x4716486f0e34b97d:0x63b6553e543f997e!5m2!4m1!1i2!8m2!3d50.0832439!4d20.2090391!16s%2Fg%2F11qp2mddkq?entry=ttu&g_ep=EgoyMDI2MDIxMC4wIKXMDSoASAFQAw%3D%3D" target="_blank" rel="noopener">
+        Lokalizacja
+      </a>
 </div>
+    </div>
+  </div>
 
-<!-- PRAWA STRONA: ZDJĘCIE -->
-<img src="Gruzja49.jpg" alt="Zdjęcie" class="right-photo">
-
+  <!-- PRAWA STRONA: ZDJĘCIE -->
   <img src="Gruzja49.jpg" alt="Zdjęcie" class="right-photo">
 
 </div>
@@ -493,10 +511,6 @@ Piotr +48607655679  wedzony@gmail.com <br>
 
 </body>
 </html>
-
-
-
-
 
 
 
