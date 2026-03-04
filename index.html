@@ -252,11 +252,7 @@
       padding: 40px;
       background: rgba(255, 255, 255, 0.9);
     }
-
-    .info-item {
-      text-align: center;
-      padding: 20px;
-    }
+.info-item { display: flex; flex-direction: column; align-items: center; /* wyśrodkuje ikonę, h3 i p */ text-align: center; /* wyśrodkuje sam tekst */ padding: 20px; }
 
     .info-icon {
       width: 80px;
@@ -271,10 +267,7 @@
       margin: 10px 0;
     }
 
-    .info-item p {
-      font-size: 30px;
-      line-height: 1.5;
-    }
+.info-item p { font-size: 30px; line-height: 1.5; margin: 10px 0 0 0; /* usuwa dziwne przesunięcia */ }
 
     /* --- FORMULARZ --- */
 
@@ -558,6 +551,7 @@ Piotr +48607655679  wedzony@gmail.com <br>
 
 </body>
 </html>
+
 
 
 
