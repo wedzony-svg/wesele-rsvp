@@ -12,6 +12,9 @@
 
   <style>
 
+    .icons-grid { display: grid; grid-template-columns: repeat(3, 1fr); /* 3 kolumny */ grid-template-rows: repeat(2, auto); /* 2 rzędy */ gap: 30px; /* odstępy między ikonami */ justify-items: center; /* wyśrodkowanie ikon w komórkach */ align-items: center; margin-top: 20px; } 
+    .icon { width: 50px; /* bezpieczny rozmiar */ height: auto; max-width: 100%; display: block; 
+
     html { scroll-behavior: smooth; }
 
     body {
@@ -365,7 +368,14 @@ Piotr +48607655679  wedzony@gmail.com <br>
 <img src="foto\1.jpeg" alt="Zdjęcie" class="right-photo">
   <div class="text-box">
     <h2>Jeśli myślicie o prezencie…</h2>
-    <h3>tutaj wkleić ikonki</h3>
+<div class="icons-grid"> 
+  <img src="ico/kwiaty.png" class="icon" alt="kwiaty.png"> 
+  <img src="ico/wino.png" class="icon" alt="wino.png"> 
+  <img src="ico/whiskey.png" class="icon" alt="whiskey.png"> 
+  <img src="ico/prezent.png" class="icon" alt="prezent.png"> 
+  <img src="ico/koperta.png" class="icon" alt="koperta.png"> 
+  <img src="ico/serce.png" class="icon" alt="koperta.png"> 
+</div>
 </div>
   </div>
 </div>
@@ -480,6 +490,7 @@ Piotr +48607655679  wedzony@gmail.com <br>
 
 </body>
 </html>
+
 
 
 
