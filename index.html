@@ -12,8 +12,9 @@
 
   <style>
 
-    .icons-grid { display: grid; grid-template-columns: repeat(4, 1fr); /* 4 kolumny */ grid-template-rows: repeat(2, auto); /* 2 rzędy */ gap: 30px; /* odstępy między ikonami */ justify-items: center; /* wyśrodkowanie ikon w komórkach */ align-items: center; margin-top: 20px; } 
+    .icons-grid { display: grid; grid-template-columns: repeat(3, 1fr); /* 3 kolumny */ grid-template-rows: repeat(2, auto); /* 2 rzędy */ gap: 10px; /* odstępy między ikonami */ justify-items: center; /* wyśrodkowanie ikon w komórkach */ align-items: center; margin-top: 20px; } 
     .icon { width: 150px; /* bezpieczny rozmiar */ height: auto; max-width: 100%; display: block; }
+    .cell { display: flex; gap: 10px; /* odstęp między ikonami */ justify-content: center; align-items: center; }
 
     html { scroll-behavior: smooth; }
 
@@ -369,8 +370,10 @@ Piotr +48607655679  wedzony@gmail.com <br>
 <div class="icons-grid"> 
   <img src="ico/kwiaty.png" class="icon" alt="kwiaty.png"> 
   <img src="ico/arrow.png" class="icon" alt="arrow.png"> 
+<div class="cell">  
   <img src="ico/whiskey.png" class="icon" alt="whiskey.png"> 
   <img src="ico/wino.png" class="icon" alt="wino.png"> 
+</div>
   <img src="ico/prezent.png" class="icon" alt="prezent.png"> 
   <img src="ico/arrow.png" class="icon" alt="arrow.png">
   <img src="ico/koperta.png" class="icon" alt="koperta.png"> 
@@ -486,6 +489,7 @@ Piotr +48607655679  wedzony@gmail.com <br>
 
 </body>
 </html>
+
 
 
 
