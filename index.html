@@ -464,6 +464,56 @@
     padding: 20px;
   }
 }
+    
+  /* KONTAKT — układ pionowy */
+  .grid-3x3 {
+    grid-template-columns: 1fr; /* jedna kolumna */
+    text-align: center;
+    gap: 10px;
+    font-size: 26px;
+  }
+
+  .grid-icon img {
+    width: 50px;
+    margin: 0 auto;
+  }
+
+  .grid-cell {
+    justify-content: center;
+    text-align: center;
+  }
+
+  /* Usunięcie pustej pierwszej ikony */
+  .grid-3x3 > :first-child {
+    display: none;
+  }
+}
+
+  /* PREZENTY — układ pionowy */
+  .icons-grid {
+    grid-template-columns: 1fr;
+    justify-items: center;
+    gap: 25px;
+  }
+
+  .icons-grid > * {
+    justify-self: center !important; /* nadpisuje wcześniejsze wyrównania */
+  }
+
+  .cell {
+    flex-direction: column;
+    gap: 10px;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .icon {
+    width: 120px;
+  }
+}
+
+
+    
 
     
   </style>
@@ -718,6 +768,7 @@ do 01.09.2026 r. za pomocą poniższego formularza. <br>
 
 </body>
 </html>
+
 
 
 
