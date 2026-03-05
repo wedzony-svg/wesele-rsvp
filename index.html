@@ -466,28 +466,34 @@
 }
     
   /* KONTAKT — układ pionowy */
-  .grid-3x3 {
-    grid-template-columns: 1fr; /* jedna kolumna */
-    text-align: center;
-    gap: 10px;
-    font-size: 26px;
+
+  /* USUNIĘCIE IKON */
+  .grid-3x3 .grid-icon {
+    display: none;
   }
 
-  .grid-icon img {
-    width: 50px;
-    margin: 0 auto;
+  /* PRZEBUDOWA UKŁADU NA PROSTĄ LISTĘ */
+  .grid-3x3 {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    font-size: 28px;
+    text-align: center;
+    margin-top: 20px;
   }
 
   .grid-cell {
-    justify-content: center;
+    padding: 0;
     text-align: center;
   }
 
-  /* Usunięcie pustej pierwszej ikony */
-  .grid-3x3 > :first-child {
-    display: none;
+  /* WYŚRODKOWANIE LINKÓW */
+  .grid-cell a {
+    display: inline-block;
+    font-size: 28px;
   }
 }
+
 
   /* PREZENTY — układ pionowy */
   .icons-grid {
@@ -509,6 +515,28 @@
 
   .icon {
     width: 120px;
+  }
+  /* PREZENTY — mniejsze ikony */
+  .icons-grid {
+    grid-template-columns: 1fr;
+    gap: 15px;
+    justify-items: center;
+  }
+
+  .icon {
+    width: 70px;     /* było 120px — teraz dużo mniejsze */
+    height: auto;
+  }
+
+  .cell {
+    flex-direction: column;
+    gap: 8px;
+    align-items: center;
+  }
+
+  /* Nadpisanie wcześniejszych wyrównań */
+  .icons-grid > * {
+    justify-self: center !important;
   }
 }
 
@@ -768,6 +796,7 @@ do 01.09.2026 r. za pomocą poniższego formularza. <br>
 
 </body>
 </html>
+
 
 
 
