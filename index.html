@@ -322,16 +322,17 @@
 }
 
     .info-icon-wrapper {
-  height: 240px;      /* możesz potem skorygować */
+  height: 240px; /* stała wysokość sekcji na ikonę */
   display: flex;
   align-items: center;
   justify-content: center;
 }
     
-.info-icons img,
-.info-icon {
-  height: 200px;
-  height: auto;
+.info-icon,
+.info-icons img {
+  height: 180px;     /* wszystkie ikony mają identyczną wysokość */
+  max-width: 180px;  /* poziome ikony nie będą za szerokie */
+  width: auto;
 }
 
     .info-item h3 {
@@ -788,6 +789,7 @@ do 01.09.2026 r. za pomocą poniższego formularza. <br>
 
 </body>
 </html>
+
 
 
 
