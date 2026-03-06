@@ -377,25 +377,26 @@
    ============================ */
 @media (max-width: 900px) {
 
-     .info-grid {
+ .info-grid {
     display: grid;
-    grid-template-columns: 1fr 1fr; /* lub 1 kolumna, jeśli wolisz */
+    grid-template-columns: 1fr !important; /* jedna kolumna */
     gap: 20px;
-    align-items: start; /* KLUCZ – grid przestaje wyrównywać wysokości */
   }
 
-  .info-item {
+   .info-item {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: flex-start;
-    height: auto; /* kafelek dopasowuje się do treści */
+    height: auto;
   }
 
   .info-icon {
-    flex-shrink: 0; /* ikona nie zmienia rozmiaru */
+    width: 80px;
+    height: 80px;
+    flex-shrink: 0;
   }
-
+  
   .info-item h3,
   .info-item p {
     margin: 10px 0 0 0; /* kontrolowane odstępy */
@@ -879,6 +880,7 @@ do 01.09.2026 r. za pomocą poniższego formularza. <br>
 
 </body>
 </html>
+
 
 
 
