@@ -1,635 +1,634 @@
 <!DOCTYPE html>
 <html lang="pl">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Wesele Piotrka i Patrycji</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Wesele Piotrka i Patrycji</title>
 
-  <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
 
-  <style>
- /* grid prezenty */
+<style>
+/* grid prezenty */
 
-    .icons-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  grid-template-rows: repeat(2, auto);
-  gap: 10px;
-  align-items: center;
-  justify-items: center; /* środkowa kolumna zostaje wycentrowana */
-  margin-top: 60px;
+.icons-grid {
+display: grid;
+grid-template-columns: repeat(3, 1fr);
+grid-template-rows: repeat(2, auto);
+gap: 10px;
+align-items: center;
+justify-items: center; /* środkowa kolumna zostaje wycentrowana */
+margin-top: 60px;
 }
 
 /* lewa kolumna → przesunięcie maksymalnie w prawo */
 .icons-grid > :nth-child(3n + 1) {
-  justify-self: end;
+justify-self: end;
 }
 
 /* prawa kolumna → przesunięcie maksymalnie w lewo */
 .icons-grid > :nth-child(3n) {
-  justify-self: start;
+justify-self: start;
 }
 
 .icon {
-  width: 150px;
-  height: auto;
-  max-width: 100%;
-  display: block;
+width: 150px;
+height: auto;
+max-width: 100%;
+display: block;
 }
 
 .cell {
-  display: flex;
-  gap: 20px;
-  justify-content: left;
-  align-items: center;
+display: flex;
+gap: 20px;
+justify-content: left;
+align-items: center;
 }
 
 
-     /* grid kontakt */
-    
-    .grid-3x3 {
-    display: none !important;
-  }
+/* grid kontakt */
 
-  .contact-mobile {
-    display: flex !important;
-    flex-direction: column !important;
-    gap: 20px !important;
-    text-align: center !important;
-    font-size: 60px !important;
-  }
+.grid-3x3 {
+display: none !important;
+}
 
-    .contact-mobile .name {
-    font-size: 60px;
-  }
+.contact-mobile {
+display: flex !important;
+flex-direction: column !important;
+gap: 20px !important;
+text-align: center !important;
+font-size: 60px !important;
+}
 
-    .contact-mobile a {
-    color: olive;
-    font-size: 60px;
-    display: inline-block;
-  }
+.contact-mobile .name {
+font-size: 60px;
+}
 
-  .person a {
-    color: olive;
-  }
+.contact-mobile a {
+color: olive;
+font-size: 60px;
+display: inline-block;
+}
 
-  .name {
-    font-size: 60px;
-  }
+.person a {
+color: olive;
+}
+
+.name {
+font-size: 60px;
+}
 
 .grid-icon {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+display: flex;
+justify-content: center;
+align-items: center;
 }
 
 .grid-icon img {
-  width: 100px;   /* rozmiar ikony */
-  height: auto;
+width: 100px;   /* rozmiar ikony */
+height: auto;
 }
 
 .grid-cell {
-  padding: 5px 0;
-  justify-content: center;
+padding: 5px 0;
+justify-content: center;
 }
 
-    
-    html { scroll-behavior: smooth; }
 
-    body {
-      min-height: 100vh;
-      margin: 0;
-      background-image: url('tlo3.png');
-      background-repeat: repeat;
-      background-color: rgba(255, 255, 255, 0.9);
-      font-family: 'Inter', sans-serif;
-      font-weight: 300; /* pół-pogrubiona */
-    }
+html { scroll-behavior: smooth; }
 
-    .header {
-      background: rgba(255, 255, 255, 0.9);
-      padding: 80px 40px 20px;
-      text-align: center;
-    }
-    
+body {
+min-height: 100vh;
+margin: 0;
+background-image: url('tlo3.png');
+background-repeat: repeat;
+background-color: rgba(255, 255, 255, 0.9);
+font-family: 'Inter', sans-serif;
+font-weight: 300; /* pół-pogrubiona */
+}
+
+.header {
+background: rgba(255, 255, 255, 0.9);
+padding: 80px 40px 20px;
+text-align: center;
+}
+
 .text-box h2 {
-  font-family: 'Great Vibes', cursive;
-  font-size: 100px;
-  margin: 10px 0;
-  text-align: center;
+font-family: 'Great Vibes', cursive;
+font-size: 100px;
+margin: 10px 0;
+text-align: center;
 }
 
 .text-box h3 {
-  font-size: 30px;
-  line-height: 1.5;
-  font-family: 'Inter', sans-serif;
-  font-weight: 300;
-}
-    
-
-
-    .header h1 {
-      font-family: 'Great Vibes', cursive;
-      font-size: 100px;
-      margin: 0;
-    }
-
-    .photo-container {
-      text-align: center;
-      margin: 30px 0;
-    }
-
-    .photo-container img {
-      width: 600px;
-      height: 600px;
-      object-fit: cover;
-      border-radius: 50%;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.2);
-    }
-
-    #countdown {
-      font-family: 'Great Vibes', cursive;
-      font-size: 70px;
-      text-align: center;
-      margin: 0px;
-      background: rgba(255,255,255,0.9);
-      display: inline-block;
-      padding: 20px 40px;
-      border-radius: 16px;
-      margin-bottom: 20px;
-    }
-
-    .countdown-title {
-  font-family: 'Great Vibes', cursive;
-  font-size: 70px;
-  text-align: center;
-  margin: 0px; 
-  background: rgba(255,255,255,0.9);
-  display: inline-block;
-  padding: 20px 40px;
-  border-radius: 16px;
+font-size: 30px;
+line-height: 1.5;
+font-family: 'Inter', sans-serif;
+font-weight: 300;
 }
 
-    /* --- SEKCJA RIGHT (tekst + zdjęcie + guziki) --- */
 
-    .right {
-      width: 100%;
-      box-sizing: border-box;
-      display: flex;
-      flex-direction: row;
-      align-items: center;
-      gap: 40px;
-      background: rgba(255, 255, 255, 0.9);
-      padding: 40px;
-    }
 
-    .right img {
-      flex: 1;
-      max-width: 30%;
-      border-radius: 16px;
-    }
+.header h1 {
+font-family: 'Great Vibes', cursive;
+font-size: 100px;
+margin: 0;
+}
 
-    .text-box {
-      flex: 1;
-    }
+.photo-container {
+text-align: center;
+margin: 30px 0;
+}
 
-    .text-box h2 {
-      font-size: 100px;
-      margin-top: 0;
-      text-align: center;
-      font-family: 'Great Vibes', cursive;
-    }
+.photo-container img {
+width: 600px;
+height: 600px;
+object-fit: cover;
+border-radius: 50%;
+box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+}
 
-    .text-box p {
-      font-size: 40px;
-      line-height: 1.6;
-      text-align: left;
-      font-family: sans-serif; 
-      font-style: normal;
-    }
+#countdown {
+font-family: 'Great Vibes', cursive;
+font-size: 70px;
+text-align: center;
+margin: 0px;
+background: rgba(255,255,255,0.9);
+display: inline-block;
+padding: 20px 40px;
+border-radius: 16px;
+margin-bottom: 20px;
+}
+
+.countdown-title {
+font-family: 'Great Vibes', cursive;
+font-size: 70px;
+text-align: center;
+margin: 0px; 
+background: rgba(255,255,255,0.9);
+display: inline-block;
+padding: 20px 40px;
+border-radius: 16px;
+}
+
+/* --- SEKCJA RIGHT (tekst + zdjęcie + guziki) --- */
+
+.right {
+width: 100%;
+box-sizing: border-box;
+display: flex;
+flex-direction: row;
+align-items: center;
+gap: 40px;
+background: rgba(255, 255, 255, 0.9);
+padding: 40px;
+}
+
+.right img {
+flex: 1;
+max-width: 30%;
+border-radius: 16px;
+}
+
+.text-box {
+flex: 1;
+}
+
+.text-box h2 {
+font-size: 100px;
+margin-top: 0;
+text-align: center;
+font-family: 'Great Vibes', cursive;
+}
 
 .text-box p {
-   font-family: 'Inter', sans-serif;
+font-size: 40px;
+line-height: 1.6;
+text-align: left;
+font-family: sans-serif; 
+font-style: normal;
 }
-    .btn-calendar {
-      display:inline-block;
-      margin-top: 14px;
-      margin-right: 20px;
-      padding:14px 22px;
-      border-radius:14px;
-      background: rgba(255,255,255,0.9);
-      color:blue;
-      text-decoration:none;
-      font-weight:600;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.15);
-      transition: transform .15s ease, box-shadow .15s ease;
-      font-size: 60px;
-      font-family: 'Great Vibes';
-    }
 
-  /* Ikona nad przyciskiem */ 
-    .calendar-box { display: flex; 
-                   flex-direction: column; 
-                   align-items: center; 
-                  }
+.text-box p {
+font-family: 'Inter', sans-serif;
+}
+.btn-calendar {
+display:inline-block;
+margin-top: 14px;
+margin-right: 20px;
+padding:14px 22px;
+border-radius:14px;
+background: rgba(255,255,255,0.9);
+color:blue;
+text-decoration:none;
+font-weight:600;
+box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+transition: transform .15s ease, box-shadow .15s ease;
+font-size: 60px;
+font-family: 'Great Vibes';
+}
+
+/* Ikona nad przyciskiem */ 
+.calendar-box { display: flex; 
+flex-direction: column; 
+align-items: center; 
+}
 
 .calendar-icon { width: 60px;
-                height: auto;
-                margin-bottom: 10px; 
-               }
+height: auto;
+margin-bottom: 10px; 
+}
 
 .buttons-wrapper { display: flex; 
-                  gap: 20px; 
-                  justify-content: center; 
-                  align-items: 
-                  flex-start; 
-                  margin-top: 20px; 
-                 }
+gap: 20px; 
+justify-content: center; 
+align-items: 
+flex-start; 
+margin-top: 20px; 
+}
 
-    /* WSPÓLNY STYL PRZYCISKÓW */ .btn { display: inline-block; 
-                                        padding: 14px 22px; 
-                                        border-radius: 14px; 
-                                        background: rgba(255,255,255,0.9); 
-                                        color: olive; text-decoration: none; 
-                                        font-weight: 600; 
-                                        box-shadow: 0 4px 12px rgba(0,0,0,0.15); 
-                                        transition: transform .15s ease, box-shadow .15s ease;    
-                                        font-size: 50px; 
-                                        font-family: 'Josefin Sans', sans-serif; 
-                                        text-align: center; 
-                                        min-width: 220px ;
-                                        font-family: 'Great Vibes', cursive; /* sprawia, że oba guziki mają tę samą szerokość */ 
-                                       }
-  
-    
-    .btn-location { 
-     /* nic nie trzeba dodawać, dziedziczy z .btn */ 
-   } 
-    
-.btn-location {
-      display:inline-block;
-      margin-top: 14px;
-      margin-right: 20px;
-      padding:14px 22px;
-      border-radius:14px;
-      background: rgba(255,255,255,0.9);
-      color:#000;
-      text-decoration:none;
-      font-weight:600;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.15);
-      transition: transform .15s ease, box-shadow .15s ease;
-      font-size: 60px;
-      font-family: 'Great Vibes';
-      color: gold;
+/* WSPÓLNY STYL PRZYCISKÓW */ .btn { display: inline-block; 
+padding: 14px 22px; 
+border-radius: 14px; 
+background: rgba(255,255,255,0.9); 
+color: olive; text-decoration: none; 
+font-weight: 600; 
+box-shadow: 0 4px 12px rgba(0,0,0,0.15); 
+transition: transform .15s ease, box-shadow .15s ease;    
+font-size: 50px; 
+font-family: 'Josefin Sans', sans-serif; 
+text-align: center; 
+min-width: 220px ;
+font-family: 'Great Vibes', cursive; /* sprawia, że oba guziki mają tę samą szerokość */ 
 }
 
 
-    .btn-calendar:hover {
-      transform: translateY(-2px);
-      box-shadow: 0 8px 18px rgba(0,0,0,0.18);
-    }
+.btn-location { 
+/* nic nie trzeba dodawać, dziedziczy z .btn */ 
+} 
 
-    /* --- INFO GRID --- */
+.btn-location {
+display:inline-block;
+margin-top: 14px;
+margin-right: 20px;
+padding:14px 22px;
+border-radius:14px;
+background: rgba(255,255,255,0.9);
+color:#000;
+text-decoration:none;
+font-weight:600;
+box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+transition: transform .15s ease, box-shadow .15s ease;
+font-size: 60px;
+font-family: 'Great Vibes';
+color: gold;
+}
 
-    .text-box h3 {
-      font-size: 40px;
-      margin-bottom: 30px;
-      text-align: center;
-      background: rgba(255, 255, 255, 0.9);
-    }
+
+.btn-calendar:hover {
+transform: translateY(-2px);
+box-shadow: 0 8px 18px rgba(0,0,0,0.18);
+}
+
+/* --- INFO GRID --- */
+
+.text-box h3 {
+font-size: 40px;
+margin-bottom: 30px;
+text-align: center;
+background: rgba(255, 255, 255, 0.9);
+}
 
 .info-grid {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  grid-auto-rows: 1fr;
-  gap: 30px;
-  padding: 40px;
-  background: rgba(255, 255, 255, 0.9);
-  align-items: start;
+display: grid;
+grid-template-columns: repeat(2, 1fr);
+grid-auto-rows: 1fr;
+gap: 30px;
+padding: 40px;
+background: rgba(255, 255, 255, 0.9);
+align-items: start;
 }
 
 .info-item {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  text-align: center;
+display: flex;
+flex-direction: column;
+align-items: center;
+text-align: center;
 }
 
 .info-icon,
 .info-icons img {
-  width: 150px;       /* wymusza identyczną szerokość */
-  height: 150px;      /* wymusza identyczną wysokość */
-  object-fit: contain; /* zachowuje proporcje, nic się nie rozciąga brzydko */
-  background: transparent;
-  display: block;
+width: 150px;       /* wymusza identyczną szerokość */
+height: 150px;      /* wymusza identyczną wysokość */
+object-fit: contain; /* zachowuje proporcje, nic się nie rozciąga brzydko */
+background: transparent;
+display: block;
 }
 
-    .info-icons {
-  width: 300px;        /* taki sam rozmiar jak ikona */
-  height: 150px;       /* wymusza identyczną wysokość */
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background: transparent;
-  gap: 10px;           /* odstęp między ikonami */
+.info-icons {
+width: 300px;        /* taki sam rozmiar jak ikona */
+height: 150px;       /* wymusza identyczną wysokość */
+display: flex;
+align-items: center;
+justify-content: center;
+background: transparent;
+gap: 10px;           /* odstęp między ikonami */
 }
 
 
 .info-item h3 {
-  font-family: 'Great Vibes', cursive;
-  font-size: 90px;
-  margin: 10px 0;
+font-family: 'Great Vibes', cursive;
+font-size: 90px;
+margin: 10px 0;
 }
 
 .info-item p {
-  font-size: 40px;
-  line-height: 1.5;
-  margin: 10px 0 0 0;
-  text-align: center;
+font-size: 40px;
+line-height: 1.5;
+margin: 10px 0 0 0;
+text-align: center;
 }
 
 
-    /* --- FORMULARZ CSS--- */
+/* --- FORMULARZ CSS--- */
 
-    .form-section {
-      max-width: 900px;
-      margin: 60px auto;
-      padding: 40px;
-      background: rgba(255,255,255,0.9);
-      border-radius: 16px;
-      box-shadow: 0 10px 30px rgba(0,0,0,0.08);
-    }
+.form-section {
+max-width: 900px;
+margin: 60px auto;
+padding: 40px;
+background: rgba(255,255,255,0.9);
+border-radius: 16px;
+box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+}
 
-    .footer {
-      margin-top: 40px;
-      font-family: 'Great Vibes', cursive;
-      font-size: 60px;
-      text-align: center;
-      padding: 30px;
-      background: rgba(255,255,255,0.9);
-    }
+.footer {
+margin-top: 40px;
+font-family: 'Great Vibes', cursive;
+font-size: 60px;
+text-align: center;
+padding: 30px;
+background: rgba(255,255,255,0.9);
+}
 
 /* ============================
-   WERSJA MOBILNA
-   ============================ */
+  WERSJA MOBILNA
+  ============================ */
 @media (max-width: 900px) {
 
- .info-grid {
-    display: grid;
-    grid-template-columns: 1fr !important; /* jedna kolumna */
-    gap: 20px;
-  }
-
-   .info-item {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: flex-start;
-    height: auto;
-  }
-
-  .info-icon {
-    width: 80px;
-    height: 80px;
-    flex-shrink: 0;
-  }
-  
-  .info-item h3,
-  .info-item p {
-    margin: 10px 0 0 0; /* kontrolowane odstępy */
-  }
-  
-  .name {
-  font-size: 16px;
-  font-weight: 600;
+.info-grid {
+display: grid;
+grid-template-columns: 1fr 1fr; /* lub 1 kolumna, jeśli wolisz */
+gap: 20px;
+align-items: start; /* KLUCZ – grid przestaje wyrównywać wysokości */
 }
-  
-  .contact-mobile {
-    width: 100%;
-    max-width: 100%;
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-    box-sizing: border-box;
-    padding: 0 10px;
-  }
 
-  .contact-mobile .person {
-    width: 50%%;
-    max-width: 100%;
-    text-align: center;
-    overflow-wrap: break-word;
-    word-break: break-word;
-  }
+.info-item {
+display: flex;
+flex-direction: column;
+align-items: center;
+justify-content: flex-start;
+height: auto; /* kafelek dopasowuje się do treści */
+}
 
-  .contact-mobile a {
-    font-size: 26px;
-    display: inline-block;
-    max-width: 100%;
-    overflow-wrap: break-word;
-    word-break: break-word;
-  }
+.info-icon {
+flex-shrink: 0; /* ikona nie zmienia rozmiaru */
+}
 
-  /* Nadpisanie desktopowego .right */
-  .right {
-    flex-direction: column !important;
-    padding: 20px !important;
-    gap: 20px !important;
-  }
+.info-item h3,
+.info-item p {
+margin: 10px 0 0 0; /* kontrolowane odstępy */
+}
 
-  .right-photo {
-    width: 100%;
-    height: auto;
-    border-radius: 12px;
-  }
-  
-  .calendar-box {
-    width: 100%;          /* kolumna ma pełną szerokość */
-    display: flex;
-    justify-content: center; /* wycentrowanie */
-  }
+.name {
+font-size: 16px;
+font-weight: 600;
+}
 
-  .btn-calendar {
-    max-width: 100%;      /* nigdy nie wyjdzie poza kolumnę */
-    width: auto;          /* dopasowuje się do treści */
-    display: inline-block;
-    box-sizing: border-box; /* padding nie powiększy elementu */
-  }
-  
-  .info-item {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  text-align: center;
+.contact-mobile {
+width: 100%;
+max-width: 100%;
+display: flex;
+flex-direction: column;
+gap: 20px;
+box-sizing: border-box;
+padding: 0 10px;
+}
+
+.contact-mobile .person {
+width: 50%%;
+max-width: 100%;
+text-align: center;
+overflow-wrap: break-word;
+word-break: break-word;
+}
+
+.contact-mobile a {
+font-size: 26px;
+display: inline-block;
+max-width: 100%;
+overflow-wrap: break-word;
+word-break: break-word;
+}
+
+/* Nadpisanie desktopowego .right */
+.right {
+flex-direction: column !important;
+padding: 20px !important;
+gap: 20px !important;
+}
+
+.right-photo {
+width: 100%;
+height: auto;
+border-radius: 12px;
+}
+
+.calendar-box {
+width: 100%;          /* kolumna ma pełną szerokość */
+display: flex;
+justify-content: center; /* wycentrowanie */
 }
 
 .btn-calendar {
-  display: inline-block;
-  margin: 0 auto;
+max-width: 100%;      /* nigdy nie wyjdzie poza kolumnę */
+width: auto;          /* dopasowuje się do treści */
+display: inline-block;
+box-sizing: border-box; /* padding nie powiększy elementu */
 }
-  
-  .calendar-box {
-    text-align: center !important;
-  }
 
-  .calendar-box .btn {
-    display: inline-block;
-    margin: 0 auto;
-  }
+.info-item {
+display: flex;
+flex-direction: column;
+align-items: center;
+text-align: center;
+}
 
-    
-  body {
-    padding: 0;
-    margin: 0;
-  }
+.btn-calendar {
+display: inline-block;
+margin: 0 auto;
+}
 
-  /* Nagłówki */
-  .header h1 {
-    font-size: 60px;
-    padding: 20px;
-  }
+.calendar-box {
+text-align: center !important;
+}
 
-  /* Zdjęcie główne */
-  .photo-container img {
-    width: 80%;
-    height: auto;
-    border-radius: 50%;
-  }
+.calendar-box .btn {
+display: inline-block;
+margin: 0 auto;
+}
 
-  /* Odliczanie */
-  #countdown,
-  .countdown-title {
-    font-size: 40px;
-    padding: 10px 20px;
-  }
 
-  /* GŁÓWNY UKŁAD — jedna kolumna */
-  .right {
-    flex-direction: column;
-    padding: 20px;
-    gap: 20px;
-  }
+body {
+padding: 0;
+margin: 0;
+}
 
-  .right img {
-    max-width: 100%;
-    width: 100%;
-    border-radius: 12px;
-  }
+/* Nagłówki */
+.header h1 {
+font-size: 60px;
+padding: 20px;
+}
 
-  .text-box h2 {
-    font-size: 60px;
-  }
+/* Zdjęcie główne */
+.photo-container img {
+width: 80%;
+height: auto;
+border-radius: 50%;
+}
 
-  .text-box h3 {
-    font-size: 26px;
-    line-height: 1.4;
-    padding: 0 10px;
-  }
+/* Odliczanie */
+#countdown,
+.countdown-title {
+font-size: 40px;
+padding: 10px 20px;
+}
 
-  .text-box p {
-    font-size: 26px;
-  }
+/* GŁÓWNY UKŁAD — jedna kolumna */
+.right {
+flex-direction: column;
+padding: 20px;
+gap: 20px;
+}
 
-  /* Przyciski */
-  .btn,
-  .btn-calendar,
-  .btn-location {
-    font-size: 40px;
-    padding: 12px 18px;
-    min-width: unset;
-    width: 100%;
-    text-align: center;
-  }
+.right img {
+max-width: 100%;
+width: 100%;
+border-radius: 12px;
+}
 
-  .buttons-wrapper {
-    flex-direction: column;
-    gap: 10px;
-  }
+.text-box h2 {
+font-size: 60px;
+}
 
-  /* KONTAKT — uproszczona lista */
+.text-box h3 {
+font-size: 26px;
+line-height: 1.4;
+padding: 0 10px;
+}
 
-  .grid-3x3 {
-    width: 100%;
-    max-width: 100%;       /* klucz – nie pozwala wyjść poza kolumnę */
-    box-sizing: border-box;
-    padding: 0 10px;       /* delikatny margines wewnętrzny */
-  }
+.text-box p {
+font-size: 26px;
+}
 
-  .grid-cell {
-    width: 100%;
-    max-width: 100%;
-    overflow-wrap: break-word; /* łamie długie linki */
-    word-break: break-word;
-  }
+/* Przyciski */
+.btn,
+.btn-calendar,
+.btn-location {
+font-size: 40px;
+padding: 12px 18px;
+min-width: unset;
+width: 100%;
+text-align: center;
+}
 
-  .grid-cell a {
-    display: inline-block;
-    max-width: 100%;       /* link nigdy nie wyjdzie poza kolumnę */
-    font-size: 24px;       /* minimalne zmniejszenie, żeby nie wypychało */
-    box-sizing: border-box;
-  }
+.buttons-wrapper {
+flex-direction: column;
+gap: 10px;
+}
 
-  
+/* KONTAKT — uproszczona lista */
+
+.grid-3x3 {
+width: 100%;
+max-width: 100%;       /* klucz – nie pozwala wyjść poza kolumnę */
+box-sizing: border-box;
+padding: 0 10px;       /* delikatny margines wewnętrzny */
+}
+
+.grid-cell {
+width: 100%;
+max-width: 100%;
+overflow-wrap: break-word; /* łamie długie linki */
+word-break: break-word;
+}
+
+.grid-cell a {
+display: inline-block;
+max-width: 100%;       /* link nigdy nie wyjdzie poza kolumnę */
+font-size: 24px;       /* minimalne zmniejszenie, żeby nie wypychało */
+box-sizing: border-box;
+}
+
+
 /* Prezenty – mniejsze ikony na telefonie */
-  .icon {
-    width: 50px !important;
-    height: auto !important;
-  }
+.icon {
+width: 50px !important;
+height: auto !important;
+}
 
 
-  .cell {
-    display: flex !important;
-    flex-direction: row !important;
-    justify-content: center;
-    gap: 10px;
-  }
+.cell {
+display: flex !important;
+flex-direction: row !important;
+justify-content: center;
+gap: 10px;
+}
 
 /* Prezenty – układ poziomy na telefonie */
 .icons-grid {
-    display: grid !important;
-    grid-template-columns: repeat(3, 1fr) !important;
-    grid-auto-rows: auto;
-    justify-items: center;
-    align-items: center;
-    gap: 10px;
-  }
+display: grid !important;
+grid-template-columns: repeat(3, 1fr) !important;
+grid-auto-rows: auto;
+justify-items: center;
+align-items: center;
+gap: 10px;
+}
 
-  /* FAQ — jedna kolumna */
-  .info-grid {
-    grid-template-columns: 1fr;
-    padding: 20px;
-  }
+/* FAQ — jedna kolumna */
+.info-grid {
+grid-template-columns: 1fr;
+padding: 20px;
+}
 
-  .info-item h3 {
-    font-size: 60px;
-  }
+.info-item h3 {
+font-size: 60px;
+}
 
-  .info-item p {
-    font-size: 26px;
-  }
+.info-item p {
+font-size: 26px;
+}
 
-  .info-icon {
-    width: 80px !important;
-    height: auto;
-  }
+.info-icon {
+width: 80px !important;
+height: auto;
+}
 
-  /* Formularz */
-  .form-section {
-    padding: 20px;
-  }
+/* Formularz */
+.form-section {
+padding: 20px;
+}
 
-  iframe {
-    height: 1200px;
-  }
+iframe {
+height: 1200px;
+}
 
-  /* Stopka */
-  .footer {
-    font-size: 40px;
-    padding: 20px;
-  }
+/* Stopka */
+.footer {
+font-size: 40px;
+padding: 20px;
+}
 
   .contact-mobile .name {
     font-size: 28px !important;
@@ -642,136 +641,136 @@
   
 }
 
-    
 
-    
-  </style>
+
+
+</style>
 </head>
 
 <body>
 
-  <div class="header">
-    <h1>Zapraszamy na wesele!</h1>
-  </div>
+<div class="header">
+<h1>Zapraszamy na wesele!</h1>
+</div>
 
-  <div class="photo-container">
-    <img src="foto\kolko.jpeg" alt="Zdjęcie pary młodej">
-  </div>
+<div class="photo-container">
+<img src="foto\kolko.jpeg" alt="Zdjęcie pary młodej">
+</div>
 
 <div style="text-align:center;">
-    <div class="countdown-title">Do wesela pozostało:</div><br>
-    <div id="countdown"></div>
+<div class="countdown-title">Do wesela pozostało:</div><br>
+<div id="countdown"></div>
 </div>
 
 
-  <div class="right">
+<div class="right">
 
-  <!-- LEWA STRONA: TEKST + PRZYCISKI -->
-  <div class="text-box">
-    <h2>Gdzie i Kiedy?</h2>
-    <h3>
-      Drodzy Najbliżsi, <br>
-      Z radością pragniemy zaprosić Was na uroczystość zawarcia związku małżeńskiego <br> 
-      oraz na przyjęcie weselne, które odbędą się w sobotę 17&nbsp;października&nbsp;2026r. o godz. 16:00 <br>
-      w Szlacheckim Dworze w Pobiedniku Wielkim.
-    </h3>
+<!-- LEWA STRONA: TEKST + PRZYCISKI -->
+<div class="text-box">
+<h2>Gdzie i Kiedy?</h2>
+<h3>
+Drodzy Najbliżsi, <br>
+Z radością pragniemy zaprosić Was na uroczystość zawarcia związku małżeńskiego <br> 
+oraz na przyjęcie weselne, które odbędą się w sobotę 17&nbsp;października&nbsp;2026r. o godz. 16:00 <br>
+w Szlacheckim Dworze w Pobiedniku Wielkim.
+</h3>
 
-    <!-- BUTTONY -->
-    <div class="buttons-wrapper">
+<!-- BUTTONY -->
+<div class="buttons-wrapper">
 
-      <div class="calendar-box">
-        <a class="btn btn-calendar"
-           target="_blank"
-           rel="noopener"
-           href="https://calendar.google.com/calendar/render?action=TEMPLATE&text=Wesele%20Piotrka%20i%20Patrycji&dates=20261017T160000/20261018T040000&ctz=Europe/Warsaw">
-          Dodaj do Kalendarza
-        </a>
-      </div>
 <div class="calendar-box">
-<a class="btn btn-calendar" target="_blank"
-   href="https://www.google.com/maps/place/Szlachecki+Dwór/">
-  Lokalizacja
+<a class="btn btn-calendar"
+target="_blank"
+rel="noopener"
+href="https://calendar.google.com/calendar/render?action=TEMPLATE&text=Wesele%20Piotrka%20i%20Patrycji&dates=20261017T160000/20261018T040000&ctz=Europe/Warsaw">
+Dodaj do Kalendarza
 </a>
 </div>
-    </div>
-  </div>
+<div class="calendar-box">
+<a class="btn btn-calendar" target="_blank"
+href="https://www.google.com/maps/place/Szlachecki+Dwór/">
+Lokalizacja
+</a>
+</div>
+</div>
+</div>
 
-  <!-- PRAWA STRONA: ZDJĘCIE -->
-  <img src="foto\pion.jpeg" alt="Zdjęcie" class="right-photo">
+<!-- PRAWA STRONA: ZDJĘCIE -->
+<img src="foto\pion.jpeg" alt="Zdjęcie" class="right-photo">
 
 </div>
 
-  <!-- SEKCJA 2 -->
+<!-- SEKCJA 2 -->
 
-  <div class="right">
-    <img src="foto\2.jpeg" alt="Zdjęcie" class="right-photo">
-  <div class="text-box">
-    <h2>Potwierdzenie Przybycia</h2>
-    <h3>
+<div class="right">
+<img src="foto\2.jpeg" alt="Zdjęcie" class="right-photo">
+<div class="text-box">
+<h2>Potwierdzenie Przybycia</h2>
+<h3>
 Wasza obecność w tym wyjątkowym dniu jest dla nas niezwykle ważna! <br>
 Prosimy o potwierdzenie przybycia oraz o wybór preferencji dotyczących posiłków, noclegu i transportu maksymalnie <br>
 do 01.09.2026 r. za pomocą poniższego formularza. <br>
-    </h3>
-    <div class="calendar-box">
-      <a class="btn btn-calendar" target="_blank" href=#formularz>
-        Formularz
-      </a>
+</h3>
+<div class="calendar-box">
+<a class="btn btn-calendar" target="_blank" href=#formularz>
+Formularz
+</a>
 </div>
-  </div>
-    
 </div>
-  <!-- SEKCJA KONTAKT TO PAŃSTWA MŁODYCH -->
+
+</div>
+<!-- SEKCJA KONTAKT TO PAŃSTWA MŁODYCH -->
 
 <div class="right">
-  <div class="text-box">
-    <h2>Kontakt do nas</h2>
-    <div class="contact-mobile">
-  <div class="person">
-    <div class="name">Patrycja</div>
-    <div class="phone">
-      <a href="tel:+48608750709">+48 608 750 709</a>
-    </div>
-    <div class="mail">
-      <a href="mailto:patrycjalango@gmail.com">patrycjalango@gmail.com</a>
-    </div>
-  </div>
-
-  <div class="person">
-    <div class="name">Piotr</div>
-    <div class="phone">
-      <a href="tel:+48607655679">+48 607 655 679</a>
-    </div>
-    <div class="mail">
-      <a href="mailto:wedzony@gmail.com">wedzony@gmail.com</a>
-    </div>
-  </div>
+<div class="text-box">
+<h2>Kontakt do nas</h2>
+<div class="contact-mobile">
+<div class="person">
+<div class="name">Patrycja</div>
+<div class="phone">
+<a href="tel:+48608750709">+48 608 750 709</a>
 </div>
-  </div>
-  <img src="foto/5.jpeg" alt="Zdjęcie" class="right-photo">
-  </div>
+<div class="mail">
+<a href="mailto:patrycjalango@gmail.com">patrycjalango@gmail.com</a>
+</div>
+</div>
+
+<div class="person">
+<div class="name">Piotr</div>
+<div class="phone">
+<a href="tel:+48607655679">+48 607 655 679</a>
+</div>
+<div class="mail">
+<a href="mailto:wedzony@gmail.com">wedzony@gmail.com</a>
+</div>
+</div>
+</div>
+</div>
+<img src="foto/5.jpeg" alt="Zdjęcie" class="right-photo">
+</div>
 
 
 
 
-    <!-- SEKCJA PREZENTÓW -->
-  
-  <div class="right">
+<!-- SEKCJA PREZENTÓW -->
+
+<div class="right">
 <img src="foto\8.jpeg" alt="Zdjęcie" class="right-photo">
-  <div class="text-box">
-    <h2>Jeśli myślicie o prezencie…</h2>
+<div class="text-box">
+<h2>Jeśli myślicie o prezencie…</h2>
 <div class="icons-grid"> 
-  <img src="ico/kwiaty.png" class="icon" alt="kwiaty.png"> 
-  <img src="ico/smallarrow.png" class="icon" alt="arrow.png"> 
+<img src="ico/kwiaty.png" class="icon" alt="kwiaty.png"> 
+<img src="ico/smallarrow.png" class="icon" alt="arrow.png"> 
 <div class="cell">  
-  <img src="ico/whiskey.png" class="icon" alt="whiskey.png"> 
-  <img src="ico/wino.png" class="icon" alt="wino.png"> 
+<img src="ico/whiskey.png" class="icon" alt="whiskey.png"> 
+<img src="ico/wino.png" class="icon" alt="wino.png"> 
 </div>
-  <img src="ico/prezent.png" class="icon" alt="prezent.png"> 
-  <img src="ico/smallarrow.png" class="icon" alt="arrow.png">
-  <img src="ico/koperta.png" class="icon" alt="koperta.png"> 
+<img src="ico/prezent.png" class="icon" alt="prezent.png"> 
+<img src="ico/smallarrow.png" class="icon" alt="arrow.png">
+<img src="ico/koperta.png" class="icon" alt="koperta.png"> 
 </div>
 </div>
-  </div>
+</div>
 
 <div class="right"> 
 <div class="text-box">
@@ -779,104 +778,105 @@ do 01.09.2026 r. za pomocą poniższego formularza. <br>
 
 <div class="info-grid" id="wazne">
 
-  <div class="info-item">
-    <img src="ico/bed.png" alt="Nocleg" class="info-icon">
-    <h3>Nocleg</h3>
-    <p>Istnieje możliwość noclegu w obiekcie – liczba miejsc ograniczona. Dajcie proszę znać w formularzu, czy potrzebujecie noclegu.</p>
-  </div>
+<div class="info-item">
+<img src="ico/bed.png" alt="Nocleg" class="info-icon">
+<h3>Nocleg</h3>
+<p>Istnieje możliwość noclegu w obiekcie – liczba miejsc ograniczona. Dajcie proszę znać w formularzu, czy potrzebujecie noclegu.</p>
+</div>
 
-  <div class="info-item">
-    <img src="ico/camera.png" alt="Galeria zdjęć" class="info-icon">
-    <h3>Wspólna galeria zdjęć</h3>
-    <p>Telefon do selfie i nagrywania życzeń będzie dostępny na weselu.</p>
-  </div>
+<div class="info-item">
+<img src="ico/camera.png" alt="Galeria zdjęć" class="info-icon">
+<h3>Wspólna galeria zdjęć</h3>
+<p>Telefon do selfie i nagrywania życzeń będzie dostępny na weselu.</p>
+</div>
 
-  <div class="info-item">
-    <div class="info-icons">
-      <img src="ico/dress.png" alt="Dress Code" class="info-icon">
-      <img src="ico/dress2.png" alt="Dress Code 2" class="info-icon">
-    </div>
-    <h3>Dress code</h3>
-    <p>Bądźcie sobą – jeśli chodzi o nas to możecie przyjść nawet w dresach – ale koniecznie z trzema paskami.</p>
-  </div>
+<div class="info-item">
+<div class="info-icons">
+<img src="ico/dress.png" alt="Dress Code" class="info-icon">
+<img src="ico/dress2.png" alt="Dress Code 2" class="info-icon">
+</div>
+<h3>Dress code</h3>
+<p>Bądźcie sobą – jeśli chodzi o nas to możecie przyjść nawet w dresach – ale koniecznie z trzema paskami.</p>
+</div>
 
-  <div class="info-item">
-    <img src="ico/atrakcje.png" alt="Atrakcje" class="info-icon">
-    <h3>Atrakcje</h3>
-    <p>Fotobudka, barman, słodki stół i wiele więcej.</p>
-  </div>
+<div class="info-item">
+<img src="ico/atrakcje.png" alt="Atrakcje" class="info-icon">
+<h3>Atrakcje</h3>
+<p>Fotobudka, barman, słodki stół i wiele więcej.</p>
+</div>
 
-  <div class="info-item">
-    <img src="ico/menu.png" alt="Menu" class="info-icon">
-    <h3>Menu</h3>
-    <p>Będzie po polsku ale z nowoczesnymi akcentami.</p>
-  </div>
+<div class="info-item">
+<img src="ico/menu.png" alt="Menu" class="info-icon">
+<h3>Menu</h3>
+<p>Będzie po polsku ale z nowoczesnymi akcentami.</p>
+</div>
 
-  <div class="info-item">
-    <img src="ico/parking.png" alt="Parking" class="info-icon">
-    <h3>Parking</h3>
-    <p>Parking dostępny na terenie obiektu.</p>
-  </div>
+<div class="info-item">
+<img src="ico/parking.png" alt="Parking" class="info-icon">
+<h3>Parking</h3>
+<p>Parking dostępny na terenie obiektu.</p>
+</div>
 
-  <div class="info-item">
-    <img src="ico/dzieci.png" alt="Dzieci" class="info-icon">
-    <h3>Dzieci</h3>
-    <p>Zapraszamy bez dzieci, ale najmniejsze maluszki są jak najbardziej mile widziane.</p>
-  </div>
+<div class="info-item">
+<img src="ico/dzieci.png" alt="Dzieci" class="info-icon">
+<h3>Dzieci</h3>
+<p>Zapraszamy bez dzieci, ale najmniejsze maluszki są jak najbardziej mile widziane.</p>
+</div>
 
-    <div class="info-item">
-    <img src="ico/gyros.png" alt="Dzieci" class="info-icon">
-    <h3>Tu coś jest</h3>
-    <p>Ten Kebab jest tu tylko po to żeby Patrycja nie narzekała na puste miejsce</p>
-  </div>
+<div class="info-item">
+<img src="ico/gyros.png" alt="Dzieci" class="info-icon">
+<h3>Tu coś jest</h3>
+<p>Ten Kebab jest tu tylko po to żeby Patrycja nie narzekała na puste miejsce</p>
+</div>
 
 
 </div>
 </div>
 </div>
 
-  <div class="right"> 
+<div class="right"> 
 <div class="text-box">
-    <h2>Potwierdzenie obecności</h2>
-  <div class="form-section" id="formularz">
-    <iframe
-      src="https://docs.google.com/forms/d/e/1FAIpQLSeU-76scHjjLoXpXhnbuAVjlhxnZsFDJinIpGXxk-KjkdKfjg/viewform?embedded=true"
-      width="100%"
-      height="1600"
-      frameborder="0">
-    </iframe>
-  </div>
+<h2>Potwierdzenie obecności</h2>
+<div class="form-section" id="formularz">
+<iframe
+src="https://docs.google.com/forms/d/e/1FAIpQLSeU-76scHjjLoXpXhnbuAVjlhxnZsFDJinIpGXxk-KjkdKfjg/viewform?embedded=true"
+width="100%"
+height="1600"
+frameborder="0">
+</iframe>
 </div>
-  </div>
+</div>
+</div>
 
-  <div class="footer">
+<div class="footer">
+    Z&nbsp;&nbsp;&nbsp;&nbsp;radością będziemy świętować ten dzień razem z Wami
     Z&nbsp;&nbsp;radością będziemy świętować ten dzień razem z Wami
-  </div>
-  
-  <script>
-    const weddingDate = new Date("2026-10-17T16:00:00+02:00").getTime();
+</div>
 
-    function updateCountdown() {
-      const now = new Date().getTime();
-      const distance = weddingDate - now;
+<script>
+const weddingDate = new Date("2026-10-17T16:00:00+02:00").getTime();
 
-      if (distance < 0) {
-        document.getElementById("countdown").innerHTML = "To już dziś!";
-        return;
-      }
+function updateCountdown() {
+const now = new Date().getTime();
+const distance = weddingDate - now;
 
-      const days = Math.floor(distance / (1000 * 60 * 60 * 24));
-      const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-      const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-      const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+if (distance < 0) {
+document.getElementById("countdown").innerHTML = "To już dziś!";
+return;
+}
 
-      document.getElementById("countdown").innerHTML =
-        `${days} dni ${hours} godz ${minutes} min ${seconds} sek`;
-    }
+const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+const seconds = Math.floor((distance % (1000 * 60)) / 1000);
 
-    setInterval(updateCountdown, 1000);
-    updateCountdown();
-  </script>
+document.getElementById("countdown").innerHTML =
+`${days} dni ${hours} godz ${minutes} min ${seconds} sek`;
+}
+
+setInterval(updateCountdown, 1000);
+updateCountdown();
+</script>
 
 </body>
 </html>
@@ -1021,3 +1021,18 @@ do 01.09.2026 r. za pomocą poniższego formularza. <br>
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+~
