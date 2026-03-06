@@ -51,17 +51,25 @@
      /* grid kontakt */
     
     .grid-3x3 {
-  display: grid;
-  grid-template-columns: 80px 1fr 1fr; /* 1 kolumna na ikony + 2 kolumny na treść */
-  grid-template-rows: repeat(3, auto); /* 3 wiersze */
-  gap: 15px;
-  align-items: center;
-  margin-top: 20px;
-  font-size: 40px;
-  line-height: 1.5;
-  font-family: 'Inter', sans-serif;
-  font-weight: 300;
-}
+    display: none !important;
+  }
+
+  .contact-mobile {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    font-size: 28px;
+    text-align: center;
+  }
+
+  .person a {
+    color: olive;
+  }
+
+  .name {
+    font-weight: bold;
+    font-size: 32px;
+  }
 
 .grid-icon {
   display: flex;
@@ -576,34 +584,28 @@ do 01.09.2026 r. za pomocą poniższego formularza. <br>
   <div class="text-box">
     <h2>Kontakt do nas</h2>
 
-    <div class="grid-3x3">
+    <div class="contact-mobile">
+  <div class="person">
+    <div class="name">Patrycja</div>
+    <div class="phone">
+      <a href="tel:+48608750709">+48 608 750 709</a>
+    </div>
+    <div class="mail">
+      <a href="mailto:patrycjalango@gmail.com">patrycjalango@gmail.com</a>
+    </div>
+  </div>
 
-      <!-- Wiersz 1 -->
-      <div class="grid-icon"></div>
-      <div class="grid-cell">Patrycja</div>
-      <div class="grid-cell">Piotr</div>
+  <div class="person">
+    <div class="name">Piotr</div>
+    <div class="phone">
+      <a href="tel:+48607655679">+48 607 655 679</a>
+    </div>
+    <div class="mail">
+      <a href="mailto:wedzony@gmail.com">wedzony@gmail.com</a>
+    </div>
+  </div>
+</div>
 
-      <!-- Wiersz 2 -->
-      <div class="grid-icon"></div>
-      <div class="grid-cell">
-        <a href="tel:+48608750709" style="color: olive;">+48 608 750 709</a>
-      </div>
-      <div class="grid-cell">
-        <a href="tel:+48607655679" style="color: olive;">+48 607 655 679</a>
-      </div>
-
-      <!-- Wiersz 3 -->
-      <div class="grid-icon"></div>
-      <div class="grid-cell">
-        <a href="mailto:patrycjalango@gmail.com" style="color: olive;">
-          patrycjalango@gmail.com
-        </a>
-      </div>
-      <div class="grid-cell">
-        <a href="mailto:wedzony@gmail.com" style="color: olive;">
-          wedzony@gmail.com
-        </a>
-      </div>
 
     </div>
   </div>
@@ -740,6 +742,7 @@ do 01.09.2026 r. za pomocą poniższego formularza. <br>
 
 </body>
 </html>
+
 
 
 
