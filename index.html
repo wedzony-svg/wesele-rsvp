@@ -377,6 +377,33 @@
    ============================ */
 @media (max-width: 900px) {
 
+    .info-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* lub 1fr jeśli chcesz jedną kolumnę */
+    gap: 20px;
+    align-items: start; /* klucz – NIE rozciąga kafelków */
+  }
+
+  .info-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start; /* tekst zaczyna się od góry */
+    height: auto; /* kafelek dopasowuje się do treści */
+  }
+
+  .info-icon {
+    width: 80px;   /* Twoja stała wielkość ikony */
+    height: 80px;  /* stała wysokość – ikona się nie zmienia */
+    object-fit: contain;
+    flex-shrink: 0; /* ikona nigdy się nie zmniejszy */
+  }
+
+  .info-item h3,
+  .info-item p {
+    margin: 10px 0 0 0; /* kontrolowane odstępy */
+  }
+  
   .name {
   font-size: 32px;
   font-weight: 600;
@@ -845,6 +872,7 @@ do 01.09.2026 r. za pomocą poniższego formularza. <br>
 
 </body>
 </html>
+
 
 
 
