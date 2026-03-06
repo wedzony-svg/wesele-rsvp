@@ -430,29 +430,30 @@
     font-size: 28px;
   }
 
-  /* PREZENTY — małe ikony, jedna kolumna */
-  .icons-grid {
-    grid-template-columns: 1fr;
-    gap: 15px;
-    justify-items: center;
-  }
   
 /* Prezenty – mniejsze ikony na telefonie */
-.icon {
-  width: 50px !important;
-}
+  .icon {
+    width: 50px !important;
+    height: auto !important;
+  }
 
 
-.cell {
-  flex-direction: row !important;
-  justify-content: center;
-}
+  .cell {
+    display: flex !important;
+    flex-direction: row !important;
+    justify-content: center;
+    gap: 10px;
+  }
 
 /* Prezenty – układ poziomy na telefonie */
 .icons-grid {
-  grid-template-columns: repeat(3, 1fr) !important;
-  gap: 10px;
-}
+    display: grid !important;
+    grid-template-columns: repeat(3, 1fr) !important;
+    grid-auto-rows: auto;
+    justify-items: center;
+    align-items: center;
+    gap: 10px;
+  }
 
   /* FAQ — jedna kolumna */
   .info-grid {
@@ -469,7 +470,7 @@
   }
 
   .info-icon {
-    width: 50px !important;
+    width: 30px !important;
     height: auto;
   }
 
@@ -739,6 +740,7 @@ do 01.09.2026 r. za pomocą poniższego formularza. <br>
 
 </body>
 </html>
+
 
 
 
