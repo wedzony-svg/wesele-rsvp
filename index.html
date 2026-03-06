@@ -302,49 +302,44 @@
       background: rgba(255, 255, 255, 0.9);
     }
 
- .info-grid {
-  align-items: start;
+.info-grid {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  grid-auto-rows: 1fr; /* każdy wiersz ma tę samą wysokość */
+  grid-auto-rows: 1fr;
   gap: 30px;
   padding: 40px;
   background: rgba(255, 255, 255, 0.9);
- }
+  align-items: start;
+}
 
-  .info-item {
+.info-item {
   display: flex;
   flex-direction: column;
-  justify-content: flex-start;
-  align-items: center;  /* zamiast center */
-  text-align: center;         /* opcjonalnie, jeśli wolisz do lewej */
-  height: 100%;
-}
-
-    .info-icon-wrapper {
-  height: 240px; /* stała wysokość sekcji na ikonę */
-  display: flex;
   align-items: center;
-  justify-content: center;
-}
-    
-.info-icons img,
-.info-icon {
-  max-width: 200px;  /* ikona nie będzie większa niż 200px */
-  width: 100%;       /* ale może się powiększyć do 200px */
-  height: auto;
+  text-align: center;
 }
 
-    .info-item h3 {
-      font-family: 'Great Vibes', cursive;
-      font-size: 90px;
-      margin: 10px 0;
-    }
+.info-icon,
+.info-icons img {
+  width: 200px;       /* wymusza identyczną szerokość */
+  height: 200px;      /* wymusza identyczną wysokość */
+  object-fit: contain; /* zachowuje proporcje, nic się nie rozciąga brzydko */
+  display: block;
+}
 
-.info-item p { font-size: 40px; 
-              line-height: 1.5; 
-              margin: 10px 0 0 0; 
-              text-align: center; /* usuwa dziwne przesunięcia */ }
+.info-item h3 {
+  font-family: 'Great Vibes', cursive;
+  font-size: 90px;
+  margin: 10px 0;
+}
+
+.info-item p {
+  font-size: 40px;
+  line-height: 1.5;
+  margin: 10px 0 0 0;
+  text-align: center;
+}
+
 
     /* --- FORMULARZ CSS--- */
 
@@ -664,81 +659,64 @@ do 01.09.2026 r. za pomocą poniższego formularza. <br>
 </div>
   </div>
 
-  <!-- SEKCJA WAŻNE INFO -->
 <div class="right"> 
 <div class="text-box">
-    <h2>Często Zadawane Pytania</h2>
+<h2>Często Zadawane Pytania</h2>
+
 <div class="info-grid" id="wazne">
 
   <div class="info-item">
-  <div class="info-icon-wrapper">
     <img src="ico/bed.png" alt="Nocleg" class="info-icon">
+    <h3>Nocleg</h3>
+    <p>Istnieje możliwość noclegu w obiekcie – liczba miejsc ograniczona. Dajcie proszę znać w formularzu, czy potrzebujecie noclegu.</p>
   </div>
-  <h3>Nocleg</h3>
-  <p>Istnieje możliwość noclegu w obiekcie – liczba miejsc ograniczona. Dajcie proszę znać w formularzu, czy potrzebujecie noclegu.</p>
-</div>
 
-<div class="info-item">
-  <div class="info-icon-wrapper">
+  <div class="info-item">
     <img src="ico/camera.png" alt="Galeria zdjęć" class="info-icon">
+    <h3>Wspólna galeria zdjęć</h3>
+    <p>Telefon do selfie i nagrywania życzeń będzie dostępny na weselu.</p>
   </div>
-  <h3>Wspólna galeria zdjęć</h3>
-  <p>Telefon do selfie i nagrywania życzeń będzie dostępny na weselu.</p>
-</div>
 
-<div class="info-item">
-  <div class="info-icon-wrapper">
+  <div class="info-item">
     <div class="info-icons">
       <img src="ico/dress.png" alt="Dress Code" class="info-icon">
       <img src="ico/dress2.png" alt="Dress Code 2" class="info-icon">
     </div>
+    <h3>Dress code</h3>
+    <p>Bądźcie sobą — jeśli chodzi o nas to możecie przyjść nawet w dresach - ale koniecznie z trzema paskami.</p>
   </div>
-  <h3>Dress code</h3>
-  <p>Bądźcie sobą — jeśli chodzi o nas to możecie przyjść nawet w dresach - ale koniecznie z trzema paskami.</p>
-</div>
 
-<div class="info-item">
-  <div class="info-icon-wrapper">
+  <div class="info-item">
     <img src="ico/atrakcje.png" alt="Atrakcje" class="info-icon">
+    <h3>Atrakcje</h3>
+    <p>Fotobudka, barman, słodki stół i wiele więcej.</p>
   </div>
-  <h3>Atrakcje</h3>
-  <p>Fotobudka, barman, słodki stół i wiele więcej.</p>
-</div>
 
-<div class="info-item">
-  <div class="info-icon-wrapper">
+  <div class="info-item">
     <img src="ico/menu.png" alt="Menu" class="info-icon">
+    <h3>Menu</h3>
+    <p>Będzie po polsku ale z nowoczesnymi akcentami.</p>
   </div>
-  <h3>Menu</h3>
-  <p>Będzie po polsku ale z nowoczesnymi akcentami.</p>
-</div>
 
-<div class="info-item">
-  <div class="info-icon-wrapper">
+  <div class="info-item">
     <img src="ico/parking.png" alt="Parking" class="info-icon">
+    <h3>Parking</h3>
+    <p>Parking dostępny na terenie obiektu.</p>
   </div>
-  <h3>Parking</h3>
-  <p>Parking dostępny na terenie obiektu.</p>
-</div>
 
-<div class="info-item">
-  <div class="info-icon-wrapper">
+  <div class="info-item">
     <img src="ico/dzieci.png" alt="Dzieci" class="info-icon">
+    <h3>Dzieci</h3>
+    <p>Zapraszamy bez dzieci, ale najmniejsze maluszki są jak najbardziej mile widziane.</p>
   </div>
-  <h3>Dzieci</h3>
-  <p>Zapraszamy bez dzieci, ale najmniejsze maluszki są jak najbardziej mile widziane.</p>
-</div>
 
-<div class="info-item">
-  <div class="info-icon-wrapper">
-    <a href="https://www.google.com/maps/place/Szlachecki+Dw%C3%B3r/@50.0832439,20.2064642,17z/data=!3m1!4b1!4m9!3m8!1s0x4716486f0e34b97d:0x63b6553e543f997e!5m2!4m1!1i2!8m2!3d50.0832439!4d20.2090391!16s%2Fg%2F11qp2mddkq?entry=ttu" target="_blank" rel="noopener">
+  <div class="info-item">
+    <a href="https://www.google.com/maps/place/Szlachecki+Dw%C3%B3r/" target="_blank" rel="noopener">
       <img src="ico/mapy.png" alt="Mapka obiektu" class="info-icon">
     </a>
+    <h3>Lokalizacja</h3>
+    <p>Kliknij ikonę, aby otworzyć mapę Google.</p>
   </div>
-  <h3>Lokalizacja</h3>
-  <p>Kliknij ikonę, aby otworzyć mapę Google.</p>
-</div>
-
 
 </div>
 </div>
@@ -789,6 +767,7 @@ do 01.09.2026 r. za pomocą poniższego formularza. <br>
 
 </body>
 </html>
+
 
 
 
