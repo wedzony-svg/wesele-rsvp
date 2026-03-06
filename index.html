@@ -408,20 +408,20 @@
 
   /* KONTAKT — uproszczona lista */
   .grid-3x3 .grid-icon {
-    display: none;
+    display: none !important;
   }
 
-  .grid-3x3 {
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-    font-size: 28px;
+    .grid-3x3 {
+    display: grid !important;
+    grid-template-columns: 1fr 1fr !important;
+    grid-template-rows: repeat(3, auto);
+    gap: 15px;
     text-align: center;
-    margin-top: 20px;
+    font-size: 28px;
   }
 
   .grid-cell {
-    padding: 0;
+    padding: 5px 0;
     text-align: center;
   }
 
@@ -470,7 +470,7 @@
   }
 
   .info-icon {
-    width: 30px !important;
+    width: 80px !important;
     height: auto;
   }
 
@@ -740,6 +740,7 @@ do 01.09.2026 r. za pomocą poniższego formularza. <br>
 
 </body>
 </html>
+
 
 
 
