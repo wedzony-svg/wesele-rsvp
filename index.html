@@ -377,26 +377,23 @@
    ============================ */
 @media (max-width: 900px) {
 
-    .info-grid {
+     .info-grid {
     display: grid;
-    grid-template-columns: 1fr 1fr; /* lub 1fr jeśli chcesz jedną kolumnę */
+    grid-template-columns: 1fr 1fr; /* lub 1 kolumna, jeśli wolisz */
     gap: 20px;
-    align-items: start; /* klucz – NIE rozciąga kafelków */
+    align-items: start; /* KLUCZ – grid przestaje wyrównywać wysokości */
   }
 
   .info-item {
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: flex-start; /* tekst zaczyna się od góry */
+    justify-content: flex-start;
     height: auto; /* kafelek dopasowuje się do treści */
   }
 
   .info-icon {
-    width: 80px;   /* Twoja stała wielkość ikony */
-    height: 80px;  /* stała wysokość – ikona się nie zmienia */
-    object-fit: contain;
-    flex-shrink: 0; /* ikona nigdy się nie zmniejszy */
+    flex-shrink: 0; /* ikona nie zmienia rozmiaru */
   }
 
   .info-item h3,
@@ -872,6 +869,7 @@ do 01.09.2026 r. za pomocą poniższego formularza. <br>
 
 </body>
 </html>
+
 
 
 
