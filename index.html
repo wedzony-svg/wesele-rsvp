@@ -440,19 +440,19 @@
 /* Prezenty – mniejsze ikony na telefonie */
 .icon {
   width: 50px !important;
-  height: auto;
 }
 
 
-  .cell {
-    flex-direction: column;
-    gap: 8px;
-    align-items: center;
-  }
+.cell {
+  flex-direction: row !important;
+  justify-content: center;
+}
 
-  .icons-grid > * {
-    justify-self: center !important;
-  }
+/* Prezenty – układ poziomy na telefonie */
+.icons-grid {
+  grid-template-columns: repeat(3, 1fr) !important;
+  gap: 10px;
+}
 
   /* FAQ — jedna kolumna */
   .info-grid {
@@ -469,7 +469,7 @@
   }
 
   .info-icon {
-    width: 100px;
+    width: 50px !important;
     height: auto;
   }
 
@@ -739,6 +739,7 @@ do 01.09.2026 r. za pomocą poniższego formularza. <br>
 
 </body>
 </html>
+
 
 
 
