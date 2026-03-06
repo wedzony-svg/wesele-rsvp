@@ -377,6 +377,45 @@
    ============================ */
 @media (max-width: 900px) {
 
+  .contact-mobile {
+    width: 100%;
+    max-width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    box-sizing: border-box;
+    padding: 0 10px;
+  }
+
+  .contact-mobile .person {
+    width: 100%;
+    max-width: 100%;
+    text-align: center;
+    overflow-wrap: break-word;
+    word-break: break-word;
+  }
+
+  .contact-mobile a {
+    font-size: 26px;
+    display: inline-block;
+    max-width: 100%;
+    overflow-wrap: break-word;
+    word-break: break-word;
+  }
+
+  /* Nadpisanie desktopowego .right */
+  .right {
+    flex-direction: column !important;
+    padding: 20px !important;
+    gap: 20px !important;
+  }
+
+  .right-photo {
+    width: 100%;
+    height: auto;
+    border-radius: 12px;
+  }
+  
   .calendar-box {
     width: 100%;          /* kolumna ma pełną szerokość */
     display: flex;
@@ -801,6 +840,7 @@ do 01.09.2026 r. za pomocą poniższego formularza. <br>
 
 </body>
 </html>
+
 
 
 
