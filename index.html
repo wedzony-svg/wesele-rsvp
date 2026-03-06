@@ -302,26 +302,29 @@
       background: rgba(255, 255, 255, 0.9);
     }
 
-    .info-grid {
-      display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      gap: 30px;
-      padding: 40px;
-      background: rgba(255, 255, 255, 0.9);
-    }
+ .info-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-auto-rows: 1fr; /* każdy wiersz ma tę samą wysokość */
+  gap: 30px;
+  padding: 40px;
+  background: rgba(255, 255, 255, 0.9);
+ }
 
-    .info-item {
+  .info-item {
   display: flex;
   flex-direction: column;
+  justify-content: flex-start; /* zapobiega rozciąganiu */
   align-items: center;
   text-align: center;
+  height: 100%; /* każdy element wypełnia swoją komórkę */
 }
 
     
-.info-icons {
-  display: flex;
-  gap: 10px;
-  justify-content: center;
+.info-icons img,
+.info-icon {
+  width: 100px;
+  height: auto;
 }
 
     .info-item h3 {
@@ -330,7 +333,10 @@
       margin: 10px 0;
     }
 
-.info-item p { font-size: 40px; line-height: 1.5; margin: 10px 0 0 0; text-align: center; /* usuwa dziwne przesunięcia */ }
+.info-item p { font-size: 40px; 
+              line-height: 1.5; 
+              margin: 10px 0 0 0; 
+              text-align: center; /* usuwa dziwne przesunięcia */ }
 
     /* --- FORMULARZ CSS--- */
 
@@ -758,6 +764,7 @@ do 01.09.2026 r. za pomocą poniższego formularza. <br>
 
 </body>
 </html>
+
 
 
 
